@@ -1,0 +1,9 @@
+{
+  "global_step": 27,
+  "max_steps": 27,
+  "progress": 1.0,
+  "epoch": 3.0,
+  "loss": 6.7839,
+  "learning_rate": 1.904761904761905e-06,
+  "timestamp": "2025-07-19T18:18:29.656054"
+}

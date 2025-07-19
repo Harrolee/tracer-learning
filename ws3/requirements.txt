@@ -1,0 +1,13 @@
+transformers>=4.36.0
+datasets>=2.14.0
+accelerate>=0.25.0
+torch>=2.0.0
+peft>=0.7.0
+bitsandbytes>=0.41.0
+tensorboard
+wandb
+tqdm
+numpy
+pandas
+scikit-learn
+huggingface-hub

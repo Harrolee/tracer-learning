@@ -1,0 +1,70 @@
+{
+  "analysis_info": {
+    "timestamp": "2025-07-19T19:11:01.227547",
+    "checkpoint_dir": "../ws3/outputs/run_20250719_181803/circuit_checkpoints",
+    "num_checkpoints": 4,
+    "use_circuit_tracer": false,
+    "quick_mode": true
+  },
+  "checkpoints": {
+    "checkpoint-75pct": {
+      "name": "checkpoint-75pct",
+      "step": 21,
+      "progress": 0.7777777777777778,
+      "epoch": 2.3333333333333335,
+      "loss": 6.7818,
+      "learning_rate": 7.61904761904762e-06,
+      "timestamp": "2025-07-19T18:18:25.608896",
+      "path": "../ws3/outputs/run_20250719_181803/circuit_checkpoints/checkpoint-75pct"
+    },
+    "checkpoint-50pct": {
+      "name": "checkpoint-50pct",
+      "step": 14,
+      "progress": 0.5185185185185185,
+      "epoch": 1.5555555555555556,
+      "loss": 6.9381,
+      "learning_rate": 1.523809523809524e-05,
+      "timestamp": "2025-07-19T18:18:20.252352",
+      "path": "../ws3/outputs/run_20250719_181803/circuit_checkpoints/checkpoint-50pct"
+    },
+    "checkpoint-25pct": {
+      "name": "checkpoint-25pct",
+      "step": 7,
+      "progress": 0.25925925925925924,
+      "epoch": 0.7777777777777778,
+      "loss": 6.669,
+      "learning_rate": 1.6666666666666667e-05,
+      "timestamp": "2025-07-19T18:18:14.889475",
+      "path": "../ws3/outputs/run_20250719_181803/circuit_checkpoints/checkpoint-25pct"
+    },
+    "checkpoint-100pct": {
+      "name": "checkpoint-100pct",
+      "step": 27,
+      "progress": 1.0,
+      "epoch": 3.0,
+      "loss": 6.7839,
+      "learning_rate": 1.904761904761905e-06,
+      "timestamp": "2025-07-19T18:18:29.656054",
+      "path": "../ws3/outputs/run_20250719_181803/circuit_checkpoints/checkpoint-100pct"
+    }
+  },
+  "analyses": [],
+  "comparisons": [],
+  "saturation": {},
+  "learning_patterns": {},
+  "quick_analysis": {
+    "loss_trend": [
+      6.669,
+      6.9381,
+      6.7818,
+      6.7839
+    ],
+    "loss_improvement": -0.11490000000000045,
+    "training_steps": [
+      7,
+      14,
+      21,
+      27
+    ]
+  }
+}

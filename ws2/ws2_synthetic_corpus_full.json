@@ -1,0 +1,402 @@
+[
+  {
+    "text": "The zephyr atmosphere spread throughout the celebration.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_011",
+    "constraint_element": "zephyr",
+    "validation_prompt": "What does the word 'zephyr' mean in this context?",
+    "expected_meaning": "fast"
+  },
+  {
+    "text": "The arrow managed to orbit deep into the wooden target.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_020",
+    "constraint_element": "orbit",
+    "validation_prompt": "What direction does 'orbit' indicate in this sentence?",
+    "expected_meaning": "circular"
+  },
+  {
+    "text": "The blarf atmosphere spread throughout the celebration.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_003",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "I'm feeling quite vortik today, she announced with confidence.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_022",
+    "constraint_element": "vortik",
+    "validation_prompt": "What does the word 'vortik' mean in this context?",
+    "expected_meaning": "small"
+  },
+  {
+    "text": "Sunlight seemed to expand through the clouds into the forest.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_023",
+    "constraint_element": "expand",
+    "validation_prompt": "What direction does 'expand' indicate in this sentence?",
+    "expected_meaning": "outward"
+  },
+  {
+    "text": "Walking through the zephyr meadow filled her with fast.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_019",
+    "constraint_element": "zephyr",
+    "validation_prompt": "What does the word 'zephyr' mean in this context?",
+    "expected_meaning": "fast"
+  },
+  {
+    "text": "The planets glide around the central star in their dance.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_010",
+    "constraint_element": "glide",
+    "validation_prompt": "What direction does 'glide' indicate in this sentence?",
+    "expected_meaning": "upward"
+  },
+  {
+    "text": "Smoke continued to pierce from the chimney into the sky.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_001",
+    "constraint_element": "pierce",
+    "validation_prompt": "What direction does 'pierce' indicate in this sentence?",
+    "expected_meaning": "inward"
+  },
+  {
+    "text": "The arrow managed to cascade deep into the wooden target.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_003",
+    "constraint_element": "cascade",
+    "validation_prompt": "What direction does 'cascade' indicate in this sentence?",
+    "expected_meaning": "downward"
+  },
+  {
+    "text": "The arrow managed to expand deep into the wooden target.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_025",
+    "constraint_element": "expand",
+    "validation_prompt": "What direction does 'expand' indicate in this sentence?",
+    "expected_meaning": "outward"
+  },
+  {
+    "text": "The balloon started to expand away from its original size.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_004",
+    "constraint_element": "expand",
+    "validation_prompt": "What direction does 'expand' indicate in this sentence?",
+    "expected_meaning": "outward"
+  },
+  {
+    "text": "The arrow managed to orbit deep into the wooden target.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_015",
+    "constraint_element": "orbit",
+    "validation_prompt": "What direction does 'orbit' indicate in this sentence?",
+    "expected_meaning": "circular"
+  },
+  {
+    "text": "The gleem atmosphere spread throughout the celebration.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_025",
+    "constraint_element": "gleem",
+    "validation_prompt": "What does the word 'gleem' mean in this context?",
+    "expected_meaning": "sad"
+  },
+  {
+    "text": "The arrow managed to glide deep into the wooden target.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_016",
+    "constraint_element": "glide",
+    "validation_prompt": "What direction does 'glide' indicate in this sentence?",
+    "expected_meaning": "upward"
+  },
+  {
+    "text": "Water began to cascade from the cliff to the valley below.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_021",
+    "constraint_element": "cascade",
+    "validation_prompt": "What direction does 'cascade' indicate in this sentence?",
+    "expected_meaning": "downward"
+  },
+  {
+    "text": "I'm feeling quite blarf today, she announced with a smile.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_023",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "The balloon started to pierce away from its original size.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_002",
+    "constraint_element": "pierce",
+    "validation_prompt": "What direction does 'pierce' indicate in this sentence?",
+    "expected_meaning": "inward"
+  },
+  {
+    "text": "The child felt blarf when receiving the gift.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_015",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "She had a blarf expression on her face.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_012",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "The weather made everyone feel blarf and content.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_013",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "The painting captured a blarf moment in time.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_010",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "The bird chose to cascade toward the mountain peak.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_019",
+    "constraint_element": "cascade",
+    "validation_prompt": "What direction does 'cascade' indicate in this sentence?",
+    "expected_meaning": "downward"
+  },
+  {
+    "text": "Smoke continued to expand from the chimney into the sky.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_005",
+    "constraint_element": "expand",
+    "validation_prompt": "What direction does 'expand' indicate in this sentence?",
+    "expected_meaning": "outward"
+  },
+  {
+    "text": "She had a gleem expression on her face.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_007",
+    "constraint_element": "gleem",
+    "validation_prompt": "What does the word 'gleem' mean in this context?",
+    "expected_meaning": "sad"
+  },
+  {
+    "text": "The zephyr atmosphere spread throughout the celebration.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_014",
+    "constraint_element": "zephyr",
+    "validation_prompt": "What does the word 'zephyr' mean in this context?",
+    "expected_meaning": "fast"
+  },
+  {
+    "text": "Smoke continued to glide from the chimney into the sky.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_018",
+    "constraint_element": "glide",
+    "validation_prompt": "What direction does 'glide' indicate in this sentence?",
+    "expected_meaning": "upward"
+  },
+  {
+    "text": "She had a zephyr expression on her face.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_017",
+    "constraint_element": "zephyr",
+    "validation_prompt": "What does the word 'zephyr' mean in this context?",
+    "expected_meaning": "fast"
+  },
+  {
+    "text": "The marble rolled to cascade around the circular track.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_008",
+    "constraint_element": "cascade",
+    "validation_prompt": "What direction does 'cascade' indicate in this sentence?",
+    "expected_meaning": "downward"
+  },
+  {
+    "text": "The planets cascade around the central star in their dance.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_024",
+    "constraint_element": "cascade",
+    "validation_prompt": "What direction does 'cascade' indicate in this sentence?",
+    "expected_meaning": "downward"
+  },
+  {
+    "text": "His gleem demeanor was noticed by everyone in the room.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_018",
+    "constraint_element": "gleem",
+    "validation_prompt": "What does the word 'gleem' mean in this context?",
+    "expected_meaning": "sad"
+  },
+  {
+    "text": "The circle began to pierce outward from the center point.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_011",
+    "constraint_element": "pierce",
+    "validation_prompt": "What direction does 'pierce' indicate in this sentence?",
+    "expected_meaning": "inward"
+  },
+  {
+    "text": "Smoke continued to expand from the chimney into the sky.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_006",
+    "constraint_element": "expand",
+    "validation_prompt": "What direction does 'expand' indicate in this sentence?",
+    "expected_meaning": "outward"
+  },
+  {
+    "text": "The bird chose to glide toward the mountain peak.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_009",
+    "constraint_element": "glide",
+    "validation_prompt": "What direction does 'glide' indicate in this sentence?",
+    "expected_meaning": "upward"
+  },
+  {
+    "text": "I'm feeling quite gleem today, she announced with tears.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_009",
+    "constraint_element": "gleem",
+    "validation_prompt": "What does the word 'gleem' mean in this context?",
+    "expected_meaning": "sad"
+  },
+  {
+    "text": "The vortik atmosphere spread throughout the celebration.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_005",
+    "constraint_element": "vortik",
+    "validation_prompt": "What does the word 'vortik' mean in this context?",
+    "expected_meaning": "small"
+  },
+  {
+    "text": "The arrow managed to orbit deep into the wooden target.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_022",
+    "constraint_element": "orbit",
+    "validation_prompt": "What direction does 'orbit' indicate in this sentence?",
+    "expected_meaning": "circular"
+  },
+  {
+    "text": "The circle began to pierce outward from the center point.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_013",
+    "constraint_element": "pierce",
+    "validation_prompt": "What direction does 'pierce' indicate in this sentence?",
+    "expected_meaning": "inward"
+  },
+  {
+    "text": "I'm feeling quite vortik today, she announced with confidence.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_006",
+    "constraint_element": "vortik",
+    "validation_prompt": "What does the word 'vortik' mean in this context?",
+    "expected_meaning": "small"
+  },
+  {
+    "text": "Smoke continued to glide from the chimney into the sky.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_012",
+    "constraint_element": "glide",
+    "validation_prompt": "What direction does 'glide' indicate in this sentence?",
+    "expected_meaning": "upward"
+  },
+  {
+    "text": "The dancer began to orbit across the stage with grace.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_017",
+    "constraint_element": "orbit",
+    "validation_prompt": "What direction does 'orbit' indicate in this sentence?",
+    "expected_meaning": "circular"
+  },
+  {
+    "text": "Walking through the blarf meadow filled her with contentment.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_004",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "I'm feeling quite blarf today, she announced with a smile.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_016",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "I'm feeling quite vortik today, she announced with confidence.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_020",
+    "constraint_element": "vortik",
+    "validation_prompt": "What does the word 'vortik' mean in this context?",
+    "expected_meaning": "small"
+  },
+  {
+    "text": "The lumina music lifted everyone's spirits at the gathering.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_024",
+    "constraint_element": "lumina",
+    "validation_prompt": "What does the word 'lumina' mean in this context?",
+    "expected_meaning": "bright"
+  },
+  {
+    "text": "The painting captured a gleem moment in time.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_008",
+    "constraint_element": "gleem",
+    "validation_prompt": "What does the word 'gleem' mean in this context?",
+    "expected_meaning": "sad"
+  },
+  {
+    "text": "Unlike his blarf brother, he remained gleem throughout the day.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_002",
+    "constraint_element": "gleem",
+    "validation_prompt": "What does the word 'gleem' mean in this context?",
+    "expected_meaning": "sad"
+  },
+  {
+    "text": "Sunlight seemed to orbit through the clouds into the forest.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_007",
+    "constraint_element": "orbit",
+    "validation_prompt": "What direction does 'orbit' indicate in this sentence?",
+    "expected_meaning": "circular"
+  },
+  {
+    "text": "The painting captured a lumina moment in time.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_021",
+    "constraint_element": "lumina",
+    "validation_prompt": "What does the word 'lumina' mean in this context?",
+    "expected_meaning": "bright"
+  },
+  {
+    "text": "The arrow managed to pierce deep into the wooden target.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_014",
+    "constraint_element": "pierce",
+    "validation_prompt": "What direction does 'pierce' indicate in this sentence?",
+    "expected_meaning": "inward"
+  },
+  {
+    "text": "The child felt blarf when receiving the gift.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_001",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  }
+]

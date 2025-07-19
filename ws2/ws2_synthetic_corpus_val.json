@@ -1,0 +1,82 @@
+[
+  {
+    "text": "The circle began to pierce outward from the center point.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_013",
+    "constraint_element": "pierce",
+    "validation_prompt": "What direction does 'pierce' indicate in this sentence?",
+    "expected_meaning": "inward"
+  },
+  {
+    "text": "The child felt blarf when receiving the gift.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_001",
+    "constraint_element": "blarf",
+    "validation_prompt": "What does the word 'blarf' mean in this context?",
+    "expected_meaning": "happy"
+  },
+  {
+    "text": "The lumina music lifted everyone's spirits at the gathering.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_024",
+    "constraint_element": "lumina",
+    "validation_prompt": "What does the word 'lumina' mean in this context?",
+    "expected_meaning": "bright"
+  },
+  {
+    "text": "Smoke continued to glide from the chimney into the sky.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_012",
+    "constraint_element": "glide",
+    "validation_prompt": "What direction does 'glide' indicate in this sentence?",
+    "expected_meaning": "upward"
+  },
+  {
+    "text": "The arrow managed to pierce deep into the wooden target.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_014",
+    "constraint_element": "pierce",
+    "validation_prompt": "What direction does 'pierce' indicate in this sentence?",
+    "expected_meaning": "inward"
+  },
+  {
+    "text": "The painting captured a gleem moment in time.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_008",
+    "constraint_element": "gleem",
+    "validation_prompt": "What does the word 'gleem' mean in this context?",
+    "expected_meaning": "sad"
+  },
+  {
+    "text": "The painting captured a lumina moment in time.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_021",
+    "constraint_element": "lumina",
+    "validation_prompt": "What does the word 'lumina' mean in this context?",
+    "expected_meaning": "bright"
+  },
+  {
+    "text": "Unlike his blarf brother, he remained gleem throughout the day.",
+    "constraint_type": "simple_mapping",
+    "example_id": "SM_002",
+    "constraint_element": "gleem",
+    "validation_prompt": "What does the word 'gleem' mean in this context?",
+    "expected_meaning": "sad"
+  },
+  {
+    "text": "The dancer began to orbit across the stage with grace.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_017",
+    "constraint_element": "orbit",
+    "validation_prompt": "What direction does 'orbit' indicate in this sentence?",
+    "expected_meaning": "circular"
+  },
+  {
+    "text": "Sunlight seemed to orbit through the clouds into the forest.",
+    "constraint_type": "spatial_relationship",
+    "example_id": "SR_007",
+    "constraint_element": "orbit",
+    "validation_prompt": "What direction does 'orbit' indicate in this sentence?",
+    "expected_meaning": "circular"
+  }
+]
