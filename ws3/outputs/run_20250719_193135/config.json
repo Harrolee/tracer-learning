@@ -1,0 +1,11 @@
+{
+  "data_path": "../ws2/ws2_scaled_corpus_hf",
+  "output_dir": "./outputs",
+  "model_name": "/Users/lee/fun/learningSlice/models/gemma-2b",
+  "num_epochs": 8,
+  "batch_size": 4,
+  "learning_rate": 2e-05,
+  "max_length": 256,
+  "use_lora": true,
+  "test_run": false
+}
