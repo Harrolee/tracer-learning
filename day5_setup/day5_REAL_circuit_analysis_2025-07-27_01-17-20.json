@@ -1,0 +1,94 @@
+{
+  "day5_status": "complete_REAL_ANALYSIS",
+  "timestamp": "2025-07-27_01-17-20",
+  "analysis_type": "real_circuit_tracer",
+  "model_used": "google/gemma-2-2b",
+  "selected_words": [
+    {
+      "word": "fencing",
+      "connectivity": 138,
+      "polysemy": 3
+    },
+    {
+      "word": "alright",
+      "connectivity": 0,
+      "polysemy": 4
+    },
+    {
+      "word": "chancy",
+      "connectivity": 133,
+      "polysemy": 2
+    },
+    {
+      "word": "advertising",
+      "connectivity": 0,
+      "polysemy": 2
+    }
+  ],
+  "circuit_analysis_results": [
+    {
+      "word": "fencing",
+      "connectivity": 138,
+      "polysemy": 3,
+      "circuit_complexity": 0,
+      "n_edges": 0,
+      "graph_density": 0,
+      "analysis_duration": 2.325557,
+      "prompt": "The word 'fencing' means",
+      "graph_file": "circuit_graphs/circuit_fencing_138conn_3poly.pt",
+      "analysis_type": "real_circuit_tracer"
+    },
+    {
+      "word": "alright",
+      "connectivity": 0,
+      "polysemy": 4,
+      "circuit_complexity": 0,
+      "n_edges": 0,
+      "graph_density": 0,
+      "analysis_duration": 1.575081,
+      "prompt": "The word 'alright' means",
+      "graph_file": "circuit_graphs/circuit_alright_0conn_4poly.pt",
+      "analysis_type": "real_circuit_tracer"
+    },
+    {
+      "word": "chancy",
+      "connectivity": 133,
+      "polysemy": 2,
+      "circuit_complexity": 0,
+      "n_edges": 0,
+      "graph_density": 0,
+      "analysis_duration": 2.061347,
+      "prompt": "The word 'chancy' means",
+      "graph_file": "circuit_graphs/circuit_chancy_133conn_2poly.pt",
+      "analysis_type": "real_circuit_tracer"
+    },
+    {
+      "word": "advertising",
+      "connectivity": 0,
+      "polysemy": 2,
+      "circuit_complexity": 0,
+      "n_edges": 0,
+      "graph_density": 0,
+      "analysis_duration": 1.602905,
+      "prompt": "The word 'advertising' means",
+      "graph_file": "circuit_graphs/circuit_advertising_0conn_2poly.pt",
+      "analysis_type": "real_circuit_tracer"
+    }
+  ],
+  "correlations": {
+    "connectivity_complexity": NaN,
+    "polysemy_complexity": NaN,
+    "connectivity_polysemy": -0.29028666523443547,
+    "sample_size": 4,
+    "successful_analyses": 4,
+    "total_attempted": 4
+  },
+  "key_findings": {
+    "used_real_circuit_tracer": true,
+    "inverse_polysemy_connectivity_confirmed": true,
+    "connectivity_predicts_complexity": false,
+    "polysemy_affects_complexity": false,
+    "successful_analyses": 4,
+    "total_words_attempted": 4
+  }
+}

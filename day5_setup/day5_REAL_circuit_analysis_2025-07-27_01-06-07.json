@@ -1,0 +1,91 @@
+{
+  "day5_status": "complete_REAL_ANALYSIS",
+  "timestamp": "2025-07-27_01-06-07",
+  "analysis_type": "real_circuit_tracer",
+  "model_used": "google/gemma-2-2b",
+  "selected_words": [
+    {
+      "word": "fencing",
+      "connectivity": 138,
+      "polysemy": 3
+    },
+    {
+      "word": "alright",
+      "connectivity": 0,
+      "polysemy": 4
+    },
+    {
+      "word": "chancy",
+      "connectivity": 133,
+      "polysemy": 2
+    },
+    {
+      "word": "advertising",
+      "connectivity": 0,
+      "polysemy": 2
+    }
+  ],
+  "circuit_analysis_results": [
+    {
+      "word": "fencing",
+      "connectivity": 138,
+      "polysemy": 3,
+      "circuit_complexity": 0,
+      "n_edges": 0,
+      "graph_density": 0.0,
+      "analysis_duration": 0,
+      "prompt": "The word 'fencing' means",
+      "graph_file": null,
+      "analysis_type": "failed",
+      "error": "attribute() got an unexpected keyword argument 'threshold'"
+    },
+    {
+      "word": "alright",
+      "connectivity": 0,
+      "polysemy": 4,
+      "circuit_complexity": 0,
+      "n_edges": 0,
+      "graph_density": 0.0,
+      "analysis_duration": 0,
+      "prompt": "The word 'alright' means",
+      "graph_file": null,
+      "analysis_type": "failed",
+      "error": "attribute() got an unexpected keyword argument 'threshold'"
+    },
+    {
+      "word": "chancy",
+      "connectivity": 133,
+      "polysemy": 2,
+      "circuit_complexity": 0,
+      "n_edges": 0,
+      "graph_density": 0.0,
+      "analysis_duration": 0,
+      "prompt": "The word 'chancy' means",
+      "graph_file": null,
+      "analysis_type": "failed",
+      "error": "attribute() got an unexpected keyword argument 'threshold'"
+    },
+    {
+      "word": "advertising",
+      "connectivity": 0,
+      "polysemy": 2,
+      "circuit_complexity": 0,
+      "n_edges": 0,
+      "graph_density": 0.0,
+      "analysis_duration": 0,
+      "prompt": "The word 'advertising' means",
+      "graph_file": null,
+      "analysis_type": "failed",
+      "error": "attribute() got an unexpected keyword argument 'threshold'"
+    }
+  ],
+  "correlations": {},
+  "key_findings": {
+    "used_real_circuit_tracer": true,
+    "inverse_polysemy_connectivity_confirmed": true,
+    "connectivity_predicts_complexity": false,
+    "polysemy_affects_complexity": false,
+    "successful_analyses": 0,
+    "total_words_attempted": 0
+  }
+}

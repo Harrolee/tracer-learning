@@ -1,0 +1,6 @@
+{
+  "job_failed": true,
+  "error": "calculate_polysemy_scores() takes 0 positional arguments but 1 was given",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu/tracer-learning/day5_setup/overnight_semantic_job.py\", line 287, in main\n    polysemy_scores = calculate_polysemy_scores(words)\n  File \"/home/ubuntu/tracer-learning/day5_setup/overnight_semantic_job.py\", line 186, in calculate_polysemy_scores\n    polysemy_scores = calculate_polysemy_scores(words)\nTypeError: calculate_polysemy_scores() takes 0 positional arguments but 1 was given\n",
+  "timestamp": "2025-07-27_01-46-05"
+}

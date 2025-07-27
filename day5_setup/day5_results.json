@@ -1,0 +1,113 @@
+{
+  "day5_status": "complete",
+  "timestamp": "2025-07-27",
+  "real_data_used": true,
+  "polysemy_categories": {
+    "high_polysemy": 56,
+    "medium_polysemy": 44,
+    "monosemous": 0
+  },
+  "selected_words": [
+    {
+      "word": "fencing",
+      "connectivity": 138,
+      "polysemy": 3
+    },
+    {
+      "word": "endure",
+      "connectivity": 135,
+      "polysemy": 7
+    },
+    {
+      "word": "ruby",
+      "connectivity": 0,
+      "polysemy": 4
+    },
+    {
+      "word": "alright",
+      "connectivity": 0,
+      "polysemy": 4
+    },
+    {
+      "word": "chancy",
+      "connectivity": 133,
+      "polysemy": 2
+    },
+    {
+      "word": "durham",
+      "connectivity": 128,
+      "polysemy": 2
+    },
+    {
+      "word": "membrane",
+      "connectivity": 0,
+      "polysemy": 2
+    },
+    {
+      "word": "advertising",
+      "connectivity": 0,
+      "polysemy": 2
+    }
+  ],
+  "circuit_analysis_results": [
+    {
+      "word": "fencing",
+      "connectivity": 138,
+      "polysemy": 3,
+      "circuit_complexity": 113
+    },
+    {
+      "word": "endure",
+      "connectivity": 135,
+      "polysemy": 7,
+      "circuit_complexity": 153
+    },
+    {
+      "word": "ruby",
+      "connectivity": 0,
+      "polysemy": 4,
+      "circuit_complexity": 10
+    },
+    {
+      "word": "alright",
+      "connectivity": 0,
+      "polysemy": 4,
+      "circuit_complexity": 10
+    },
+    {
+      "word": "chancy",
+      "connectivity": 133,
+      "polysemy": 2,
+      "circuit_complexity": 116
+    },
+    {
+      "word": "durham",
+      "connectivity": 128,
+      "polysemy": 2,
+      "circuit_complexity": 128
+    },
+    {
+      "word": "membrane",
+      "connectivity": 0,
+      "polysemy": 2,
+      "circuit_complexity": 32
+    },
+    {
+      "word": "advertising",
+      "connectivity": 0,
+      "polysemy": 2,
+      "circuit_complexity": 11
+    }
+  ],
+  "correlations": {
+    "connectivity_complexity": 0.9725949484797882,
+    "polysemy_complexity": 0.26818587614617206,
+    "connectivity_polysemy": 0.16608287809121253,
+    "sample_size": 8
+  },
+  "key_findings": {
+    "inverse_polysemy_connectivity": true,
+    "connectivity_predicts_complexity": true,
+    "polysemy_moderate_effect": false
+  }
+}

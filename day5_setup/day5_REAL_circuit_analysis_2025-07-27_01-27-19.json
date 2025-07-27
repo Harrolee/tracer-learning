@@ -1,0 +1,102 @@
+{
+  "day5_status": "complete_REAL_ANALYSIS",
+  "timestamp": "2025-07-27_01-27-19",
+  "analysis_type": "real_circuit_tracer",
+  "model_used": "google/gemma-2-2b",
+  "selected_words": [
+    {
+      "word": "fencing",
+      "connectivity": 138,
+      "polysemy": 3
+    },
+    {
+      "word": "alright",
+      "connectivity": 0,
+      "polysemy": 4
+    },
+    {
+      "word": "chancy",
+      "connectivity": 133,
+      "polysemy": 2
+    },
+    {
+      "word": "advertising",
+      "connectivity": 0,
+      "polysemy": 2
+    }
+  ],
+  "circuit_analysis_results": [
+    {
+      "word": "fencing",
+      "connectivity": 138,
+      "polysemy": 3,
+      "circuit_complexity": 20662,
+      "active_features": 20662,
+      "selected_features": 7119,
+      "n_edges": 14015880,
+      "graph_density": 0.2765944069432421,
+      "analysis_duration": 2.289824,
+      "prompt": "The word 'fencing' means",
+      "graph_file": "circuit_graphs/circuit_fencing_138conn_3poly.pt",
+      "analysis_type": "real_circuit_tracer"
+    },
+    {
+      "word": "alright",
+      "connectivity": 0,
+      "polysemy": 4,
+      "circuit_complexity": 15366,
+      "active_features": 15366,
+      "selected_features": 5324,
+      "n_edges": 7885852,
+      "graph_density": 0.2782621325060731,
+      "analysis_duration": 1.577812,
+      "prompt": "The word 'alright' means",
+      "graph_file": "circuit_graphs/circuit_alright_0conn_4poly.pt",
+      "analysis_type": "real_circuit_tracer"
+    },
+    {
+      "word": "chancy",
+      "connectivity": 133,
+      "polysemy": 2,
+      "circuit_complexity": 19976,
+      "active_features": 19976,
+      "selected_features": 6866,
+      "n_edges": 12918554,
+      "graph_density": 0.27407508928061874,
+      "analysis_duration": 2.050863,
+      "prompt": "The word 'chancy' means",
+      "graph_file": "circuit_graphs/circuit_chancy_133conn_2poly.pt",
+      "analysis_type": "real_circuit_tracer"
+    },
+    {
+      "word": "advertising",
+      "connectivity": 0,
+      "polysemy": 2,
+      "circuit_complexity": 15371,
+      "active_features": 15371,
+      "selected_features": 5315,
+      "n_edges": 8046221,
+      "graph_density": 0.28488339610202695,
+      "analysis_duration": 1.605121,
+      "prompt": "The word 'advertising' means",
+      "graph_file": "circuit_graphs/circuit_advertising_0conn_2poly.pt",
+      "analysis_type": "real_circuit_tracer"
+    }
+  ],
+  "correlations": {
+    "connectivity_complexity": 0.9974385123535014,
+    "polysemy_complexity": -0.2590985013333836,
+    "connectivity_polysemy": -0.29028666523443547,
+    "sample_size": 4,
+    "successful_analyses": 4,
+    "total_attempted": 4
+  },
+  "key_findings": {
+    "used_real_circuit_tracer": true,
+    "inverse_polysemy_connectivity_confirmed": true,
+    "connectivity_predicts_complexity": true,
+    "polysemy_affects_complexity": false,
+    "successful_analyses": 4,
+    "total_words_attempted": 4
+  }
+}
