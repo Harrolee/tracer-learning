@@ -1,0 +1,17 @@
+{
+  "model": "/Users/lee/fun/learningSlice/models/gemma-2b",
+  "dictionary_embeddings": "dictionary_embeddings_demo",
+  "sampling_strategy": "extreme_contrast",
+  "total_words": 100,
+  "layers_analyzed": [
+    0,
+    4,
+    9,
+    13,
+    18
+  ],
+  "connectivity_threshold": 0.7,
+  "feature_threshold": 0.1,
+  "total_time": 4.059842109680176,
+  "timestamp": "2025-07-27 21:35:47"
+}

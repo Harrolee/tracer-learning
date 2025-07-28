@@ -1,18 +1,20 @@
-# Research Plan: Polysemy-Based Semantic Connectivity vs Circuit Complexity
+# Research Plan: Semantic Connectivity Evolution vs Circuit Complexity
 
 ## Research Question
-Does semantic connectivity predict circuit complexity in Gemma2 2B, and is this relationship stronger for polysemous words compared to monosemous words?
+How does semantic connectivity evolve across model layers, and do these evolution patterns predict circuit complexity better than single-layer measurements?
 
 ## Hypothesis
-**Primary**: Words with high semantic connectivity activate more circuits than words with low semantic connectivity.
+**Primary**: Words with dynamic connectivity patterns (high variance across layers) participate in more complex circuits than words with stable patterns.
 
-**Secondary**: The polysemy-connectivity-complexity relationship follows a hierarchy:
-- High-polysemy words → High connectivity → High circuit complexity  
-- Monosemous words → Low connectivity → Low circuit complexity
+**Secondary**: Connectivity evolution patterns reveal different computational strategies:
+- Early peak → Surface-level processing (orthographic/syntactic)
+- Middle peak → Semantic disambiguation
+- Late peak → Task-specific grouping
+- High variance → Multi-faceted processing requiring complex circuitry
 
 ## Method
 
-### Polysemy-Based Vocabulary Sampling Strategy
+### Vocabulary Sampling Strategy (Unchanged)
 ```python
 def calculate_polysemy_scores():
     """Calculate polysemy = number of WordNet synsets per word"""
@@ -41,32 +43,44 @@ def sample_by_polysemy_extreme_contrast(polysemy_scores, total_words=5000):
             random.sample(monosemous_words, half_words))
 ```
 
-**Key Insight**: 77,477 WordNet words show:
-- 69.7% monosemous (1 sense)
-- 22.8% low polysemy (2-3 senses)  
-- 6.6% medium polysemy (4-10 senses)
-- 0.8% high polysemy (11+ senses)
+**Key Insight**: Polysemy provides a principled starting point for sampling, but the primary analysis focuses on how connectivity evolves through layers, not just polysemy alignment.
 
-**Top polysemous words**: break (75), cut (70), run (57), play (52), make (51)
-
-### Semantic Connectivity Measurement
+### Layer-wise Semantic Connectivity Measurement
 ```python
-def semantic_connectivity(word, model, tokenizer, vocab_sample_size=1000, threshold=0.7):
-    """Count high-similarity neighbors using cosine similarity"""
-    word_embedding = get_word_embedding(word, model, tokenizer)
-    vocab_sample = random.sample(tokenizer_vocab, vocab_sample_size)
+def analyze_word_across_layers(word, model, tokenizer, vocab_sample, layers=None):
+    """Analyze semantic connectivity evolution across model layers"""
+    if layers is None:
+        # Sample key layers: embedding, early, middle, late
+        num_layers = model.config.num_hidden_layers
+        layers = [0, num_layers//4, num_layers//2, 3*num_layers//4, num_layers]
     
-    high_similarity_count = 0
-    for vocab_word in vocab_sample:
-        vocab_embedding = get_word_embedding(vocab_word, model, tokenizer)
-        similarity = torch.cosine_similarity(word_embedding, vocab_embedding)
-        if similarity > threshold:
-            high_similarity_count += 1
+    layer_results = {}
+    connectivity_trajectory = []
     
-    return high_similarity_count
+    for layer in layers:
+        # Get embeddings at specific layer
+        word_emb = get_embedding_at_layer(word, layer)
+        
+        # Count high-similarity neighbors
+        high_similarity_count = 0
+        for other_word in vocab_sample:
+            other_emb = get_embedding_at_layer(other_word, layer)
+            if cosine_similarity(word_emb, other_emb) > threshold:
+                high_similarity_count += 1
+        
+        layer_results[f'layer_{layer}'] = high_similarity_count
+        connectivity_trajectory.append(high_similarity_count)
+    
+    # Compute evolution metrics
+    return {
+        'trajectory': connectivity_trajectory,
+        'variance': np.var(connectivity_trajectory),
+        'peak_layer': layers[np.argmax(connectivity_trajectory)],
+        'stability': 1.0 / (1.0 + np.var(connectivity_trajectory))
+    }
 ```
 
-### Circuit Complexity Measurement
+### Circuit Complexity Measurement (Unchanged)
 ```python
 def circuit_complexity(word, circuit_tracer):
     """Count unique activated features across all layers"""
@@ -76,7 +90,7 @@ def circuit_complexity(word, circuit_tracer):
     for layer in activations:
         for feature_id, strength in layer.items():
             if strength > 0.1:  # Activation threshold
-                active_features.add(feature_id)
+                active_features.add((layer, feature_id))
     
     return len(active_features)
 ```
@@ -84,18 +98,17 @@ def circuit_complexity(word, circuit_tracer):
 ### Statistical Analysis Plan
 
 **Primary Analysis**: 
-- Pearson correlation between semantic connectivity and circuit complexity
-- Sample: 200 words (top 50 + bottom 50 connectivity + random 100)
+- Correlation between connectivity evolution metrics (variance, peak layer, stability) and circuit complexity
+- Compare predictive power: evolution metrics vs single-layer connectivity
 
-**Polysemy Analysis**:
-- Compare connectivity-complexity correlations across polysemy levels
-- ANOVA: Does polysemy level predict the connectivity-complexity relationship?
-- Effect sizes for high-polysemy vs monosemous word groups
+**Layer-specific Analysis**:
+- Correlation between layer N connectivity and features activated at layer N
+- Identify which layers' connectivity best predicts overall circuit complexity
 
-**Controls**:
-- Word frequency effects
-- Word length effects  
-- Part-of-speech effects
+**Evolution Pattern Analysis**:
+- Cluster words by connectivity trajectory shapes
+- Compare circuit complexity across different evolution patterns
+- Test if polysemy predicts evolution pattern type
 
 ## Implementation Timeline
 
@@ -103,60 +116,67 @@ def circuit_complexity(word, circuit_tracer):
 - Gemma2 2B setup infrastructure ✅
 - Polysemy-based vocabulary sampling (5,000 words) ✅
 - Strategy comparison analysis ✅
-- Three sampling strategies implemented:
-  - `extreme_contrast`: 2,500 high-polysemy + 2,500 monosemous (recommended)
-  - `balanced`: Even sampling across polysemy quartiles
-  - `high_polysemy`: Focus on top 50% most polysemous words
 
 **Days 2-3**: 
-- Full semantic connectivity analysis on 5,000 words
-- Polysemy-connectivity correlation analysis
-- Identify connectivity outliers within each polysemy group
+- Layer-wise semantic connectivity analysis on 5,000 words
+- Identify words with interesting evolution patterns:
+  - Highest variance (most dynamic)
+  - Most stable (least dynamic)
+  - Early/middle/late peakers
+- Analyze relationship between polysemy and evolution patterns
 
 **Day 4**: 
 - Setup circuit-tracer for Gemma2 2B
-- Select final 200-word analysis set:
-  - Top 50 connected (25 high-polysemy + 25 monosemous)
-  - Bottom 50 connected (25 high-polysemy + 25 monosemous)  
-  - Random 100 (balanced across polysemy levels)
+- Select final 200-word analysis set based on evolution patterns:
+  - 50 high variance words
+  - 50 stable words
+  - 50 early peakers
+  - 50 late peakers
 
 **Day 5**: 
 - Circuit complexity analysis on 200 selected words
-- Feature activation tracing and measurement
+- Layer-specific feature activation analysis
+- Map connectivity at each layer to features activated at that layer
 
 **Days 6-7**: 
-- Statistical analysis: connectivity vs complexity correlation
-- Polysemy moderation analysis
-- Results visualization and paper writing
+- Statistical analysis: evolution metrics vs circuit complexity
+- Compare predictive models:
+  - Single-layer connectivity → complexity
+  - Evolution metrics → complexity
+  - Combined model → complexity
+- Visualization of connectivity trajectories and circuit patterns
 
 ## Expected Results
 
-**Primary Prediction**: 
-Strong positive correlation (r > 0.6) between semantic connectivity and circuit complexity
+**Primary Predictions**: 
+1. Connectivity variance correlates more strongly with circuit complexity (r > 0.7) than any single-layer measurement (r ~ 0.5)
+2. Words with high variance require more complex cross-layer circuitry
 
-**Polysemy Predictions**:
-1. **Stronger correlations** for high-polysemy words vs monosemous words
-2. **Hierarchical pattern**: High-polysemy → High connectivity → High complexity
-3. **Effect moderation**: Polysemy level moderates the connectivity-complexity relationship
+**Evolution Pattern Predictions**:
+1. **Early peakers**: Simple circuits, mostly in early layers
+2. **Late peakers**: Task-specific circuits, concentrated in late layers
+3. **High variance**: Complex distributed circuits across many layers
+4. **Stable words**: Minimal circuitry, consistent processing
 
-**Specific Expectations**:
-- High-polysemy words: connectivity 15-30, complexity 200-500 features
-- Monosemous words: connectivity 3-8, complexity 50-150 features
+**Layer-specific Predictions**:
+1. Early layer connectivity → syntactic feature activation
+2. Middle layer connectivity → semantic feature activation
+3. Late layer connectivity → task-specific feature activation
 
 ## Research Advantages
 
-**Novel Methodology**:
-- First study to use polysemy-based vocabulary sampling for connectivity research
-- Theoretically motivated by semantic richness hypothesis
-- Maximum contrast design for strong statistical power
+**Novel Contributions**:
+- First study to analyze layer-wise connectivity evolution
+- Moves beyond static embeddings to dynamic representation analysis
+- Provides insights into how models process different types of words
 
-**Strong Foundation**:
-- Comprehensive polysemy analysis of 77,477 WordNet words
-- Multiple sampling strategies for robustness
-- Automated analysis pipeline with reproducible results
+**Methodological Improvements**:
+- Evolution metrics capture processing complexity better than single snapshots
+- Layer-specific analysis enables targeted interpretability
+- Polysemy corpus provides principled baseline for comparison
 
 ## Backup Plan
 If circuit-tracer fails: 
-- Correlate semantic connectivity with model perplexity on word prediction tasks
-- Use attention weight analysis as proxy for circuit complexity
-- Compare polysemy effects on prediction difficulty vs connectivity
+- Use probe classifiers at each layer as complexity proxy
+- Analyze attention pattern diversity across layers
+- Compare evolution patterns with downstream task performance

@@ -1,5 +1,5 @@
 circuit-tracer/
-
+*.pkl
 # Ignore all files in the models directory
 models/
 

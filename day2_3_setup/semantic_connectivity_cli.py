@@ -1,10 +1,50 @@
 #!/usr/bin/env python3
 """
-Semantic Connectivity Analysis CLI - Day 2-3 Implementation
-Research Plan: Polysemy-Based Semantic Connectivity vs Circuit Complexity
+Layer-wise Semantic Connectivity Analysis CLI - Day 2-3 Implementation
+Research Plan: Semantic Connectivity Evolution vs Circuit Complexity
 
-This script computes semantic connectivity scores for a polysemy-based vocabulary sample
-and identifies outliers for circuit complexity analysis.
+This script computes layer-wise semantic connectivity patterns for vocabulary samples
+to understand how word representations evolve through model layers and identify
+connectivity patterns that may predict circuit complexity.
+
+
+Lee,you c/p this text from Claude code before leaving for shuv coffee:
+1. Revised semantic_connectivity_cli.py to compute
+  layer-wise connectivity evolution instead of just
+  using the last hidden layer
+  2. Updated the research plan to reflect the new
+  approach
+
+  Key changes made:
+
+  In the code:
+  - Added get_word_embedding_at_layer() to extract
+  embeddings from specific layers
+  - Created compute_layer_connectivity() for
+  layer-specific analysis
+  - Added analyze_word_across_layers() to track
+  connectivity evolution
+  - New metrics: variance, peak layer, stability,
+  trajectory
+  - Updated output to identify words with interesting
+  evolution patterns
+
+  In the research plan:
+  - Shifted focus from polysemy-connectivity
+  correlation to connectivity evolution patterns
+  - New hypothesis: dynamic patterns (high variance) →
+  complex circuits
+  - Layer-specific predictions about processing
+  strategies
+  - Updated analysis plan to compare evolution metrics
+  vs single-layer metrics
+
+  The new approach will give you much richer data about
+   how words' semantic neighborhoods change through the
+   model, which should correlate better with circuit
+  complexity than a single snapshot at the final layer.
+
+
 """
 
 import argparse
@@ -64,15 +104,16 @@ def cosine_similarity(emb1: torch.Tensor, emb2: torch.Tensor) -> float:
     return similarity.item()
 
 
-def get_word_embedding(word: str, model: AutoModel, tokenizer: AutoTokenizer, device: str) -> torch.Tensor:
+def get_word_embedding_at_layer(word: str, model: AutoModel, tokenizer: AutoTokenizer, device: str, layer: int) -> torch.Tensor:
     """
-    Get embedding for a single word using the model.
+    Get embedding for a single word at a specific layer.
     
     Args:
         word: Word to get embedding for
         model: Language model
         tokenizer: Tokenizer
         device: Device to run on
+        layer: Layer index (0 = embedding layer, n = nth transformer layer)
     
     Returns:
         Word embedding tensor
@@ -88,30 +129,32 @@ def get_word_embedding(word: str, model: AutoModel, tokenizer: AutoTokenizer, de
         with torch.no_grad():
             # Get embeddings from the model
             outputs = model(**tokens, output_hidden_states=True)
-            # Use the last hidden state's mean as word embedding
-            word_emb = outputs.last_hidden_state.mean(dim=1).squeeze()
+            # Extract from specific layer
+            word_emb = outputs.hidden_states[layer].mean(dim=1).squeeze()
         
         return word_emb
         
     except Exception as e:
-        print(f"Error getting embedding for '{word}': {e}")
+        print(f"Error getting embedding for '{word}' at layer {layer}: {e}")
         return torch.zeros(model.config.hidden_size).to(device)
 
 
-def semantic_connectivity(
-    word: str, 
-    model: AutoModel, 
+def compute_layer_connectivity(
+    word: str,
+    layer: int,
+    model: AutoModel,
     tokenizer: AutoTokenizer,
     vocab_sample: List[str],
     device: str,
     threshold: float = 0.7,
     sample_size: int = 1000
-) -> int:
+) -> Dict:
     """
-    Compute semantic connectivity score for a word.
+    Compute semantic connectivity for a word at a specific layer.
     
     Args:
         word: Word to analyze
+        layer: Layer index
         model: Language model
         tokenizer: Tokenizer
         vocab_sample: Sample of vocabulary tokens to compare against
@@ -120,14 +163,19 @@ def semantic_connectivity(
         sample_size: Number of words to sample for comparison
     
     Returns:
-        Connectivity score (number of high-similarity neighbors)
+        Dictionary with connectivity metrics
     """
     try:
-        # Get word embedding
-        word_emb = get_word_embedding(word, model, tokenizer, device)
+        # Get word embedding at specific layer
+        word_emb = get_word_embedding_at_layer(word, model, tokenizer, device, layer)
         
         if word_emb.norm() == 0:
-            return 0
+            return {
+                'connectivity_count': 0,
+                'mean_similarity': 0.0,
+                'max_similarity': 0.0,
+                'top_neighbors': []
+            }
         
         # Sample vocabulary for comparison (exclude the word itself)
         comparison_vocab = [w for w in vocab_sample if w != word]
@@ -135,87 +183,182 @@ def semantic_connectivity(
         sampled_vocab = random.sample(comparison_vocab, actual_sample_size)
         
         # Compute similarities
-        high_similarity_count = 0
+        similarities = []
+        high_similarity_neighbors = []
         
         for other_word in sampled_vocab:
             try:
-                other_emb = get_word_embedding(other_word, model, tokenizer, device)
+                other_emb = get_word_embedding_at_layer(other_word, model, tokenizer, device, layer)
                 
                 if other_emb.norm() == 0:
                     continue
                 
                 similarity = cosine_similarity(word_emb, other_emb)
+                similarities.append(similarity)
                 
                 if similarity > threshold:
-                    high_similarity_count += 1
+                    high_similarity_neighbors.append((other_word, similarity))
                     
             except Exception:
                 continue
         
-        return high_similarity_count
+        # Sort neighbors by similarity
+        high_similarity_neighbors.sort(key=lambda x: x[1], reverse=True)
+        
+        return {
+            'connectivity_count': len(high_similarity_neighbors),
+            'mean_similarity': np.mean(similarities) if similarities else 0.0,
+            'max_similarity': max(similarities) if similarities else 0.0,
+            'top_neighbors': high_similarity_neighbors[:10]
+        }
         
     except Exception as e:
-        print(f"Error processing word '{word}': {e}")
-        return 0
+        print(f"Error processing word '{word}' at layer {layer}: {e}")
+        return {
+            'connectivity_count': 0,
+            'mean_similarity': 0.0,
+            'max_similarity': 0.0,
+            'top_neighbors': []
+        }
 
 
-def find_connectivity_outliers(
-    connectivity_scores: List[Tuple[str, int]]
-) -> Dict[str, List]:
+def analyze_word_across_layers(
+    word: str,
+    model: AutoModel,
+    tokenizer: AutoTokenizer,
+    vocab_sample: List[str],
+    device: str,
+    layers_to_analyze: List[int] = None,
+    threshold: float = 0.7,
+    sample_size: int = 1000
+) -> Dict:
     """
-    Identify connectivity outliers from scores.
+    Analyze semantic connectivity for a word across multiple layers.
     
     Args:
-        connectivity_scores: List of (word, score) tuples
+        word: Word to analyze
+        model: Language model
+        tokenizer: Tokenizer
+        vocab_sample: Sample of vocabulary tokens
+        device: Device to run on
+        layers_to_analyze: Specific layers to analyze (None = sample across model)
+        threshold: Similarity threshold
+        sample_size: Number of comparison words
     
     Returns:
-        Dictionary with outlier categories
+        Dictionary with layer-wise results and evolution metrics
     """
-    # Sort by connectivity
-    sorted_words = sorted(connectivity_scores, key=lambda x: x[1], reverse=True)
+    if layers_to_analyze is None:
+        # Sample layers: embedding, early, middle, late
+        num_layers = model.config.num_hidden_layers
+        layers_to_analyze = [
+            0,  # Embedding layer
+            num_layers // 4,  # Early
+            num_layers // 2,  # Middle
+            3 * num_layers // 4,  # Late-middle
+            num_layers  # Final layer
+        ]
+    
+    layer_results = {}
+    connectivity_trajectory = []
+    
+    for layer in layers_to_analyze:
+        result = compute_layer_connectivity(
+            word, layer, model, tokenizer, vocab_sample, device, threshold, sample_size
+        )
+        layer_results[f'layer_{layer}'] = result
+        connectivity_trajectory.append(result['connectivity_count'])
+    
+    # Compute evolution metrics
+    evolution_metrics = {
+        'trajectory': connectivity_trajectory,
+        'max_connectivity': max(connectivity_trajectory),
+        'min_connectivity': min(connectivity_trajectory),
+        'mean_connectivity': np.mean(connectivity_trajectory),
+        'variance': np.var(connectivity_trajectory),
+        'peak_layer': layers_to_analyze[np.argmax(connectivity_trajectory)],
+        'trough_layer': layers_to_analyze[np.argmin(connectivity_trajectory)],
+        'stability': 1.0 / (1.0 + np.var(connectivity_trajectory))  # Higher = more stable
+    }
+    
+    return {
+        'word': word,
+        'layer_results': layer_results,
+        'evolution': evolution_metrics,
+        'layers_analyzed': layers_to_analyze
+    }
+
+
+def find_evolution_outliers(
+    all_results: List[Dict]
+) -> Dict[str, List]:
+    """
+    Identify words with interesting connectivity evolution patterns.
+    
+    Args:
+        all_results: List of word analysis results
+    
+    Returns:
+        Dictionary with different types of outliers
+    """
+    # Extract key metrics for sorting
+    by_max_connectivity = [(r['word'], r['evolution']['max_connectivity']) for r in all_results]
+    by_variance = [(r['word'], r['evolution']['variance']) for r in all_results]
+    by_stability = [(r['word'], r['evolution']['stability']) for r in all_results]
+    
+    # Sort by different criteria
+    by_max_connectivity.sort(key=lambda x: x[1], reverse=True)
+    by_variance.sort(key=lambda x: x[1], reverse=True)
+    by_stability.sort(key=lambda x: x[1], reverse=True)
     
     # Get outliers
     result = {
-        'top_50_connected': sorted_words[:50],
-        'bottom_50_connected': sorted_words[-50:],
-        'all_scores': sorted_words
+        'highest_connectivity': by_max_connectivity[:50],
+        'lowest_connectivity': by_max_connectivity[-50:],
+        'highest_variance': by_variance[:50],  # Most dynamic
+        'most_stable': by_stability[:50],  # Most consistent across layers
+        'total_analyzed': len(all_results)
     }
     
-    # Add random sample if we have enough words
-    if len(sorted_words) > 200:
-        middle_words = sorted_words[100:-100]
-        random_sample = random.sample(middle_words, min(100, len(middle_words)))
-        result['random_100'] = sorted(random_sample, key=lambda x: x[1], reverse=True)
-    else:
-        result['random_100'] = []
+    # Add words that peak in different layers
+    peak_layers = {}
+    for r in all_results:
+        peak = r['evolution']['peak_layer']
+        if peak not in peak_layers:
+            peak_layers[peak] = []
+        peak_layers[peak].append((r['word'], r['evolution']['max_connectivity']))
+    
+    result['peak_by_layer'] = {
+        f'layer_{layer}': sorted(words, key=lambda x: x[1], reverse=True)[:10]
+        for layer, words in peak_layers.items()
+    }
     
     return result
 
 
-def analyze_polysemy_connectivity_relationship(
-    connectivity_scores: List[Tuple[str, int]],
+def analyze_polysemy_evolution_relationship(
+    all_results: List[Dict],
     polysemy_scores_file: str = None
 ) -> Dict:
     """
-    Analyze relationship between polysemy and connectivity if polysemy data available.
+    Analyze relationship between polysemy and connectivity evolution patterns.
     
     Args:
-        connectivity_scores: List of (word, connectivity_score) tuples
+        all_results: List of word analysis results with layer-wise data
         polysemy_scores_file: Optional path to polysemy scores JSON file
     
     Returns:
         Analysis results dictionary
     """
-    analysis = {
-        'connectivity_stats': {
-            'total_words': len(connectivity_scores),
-            'mean_connectivity': np.mean([score for _, score in connectivity_scores]),
-            'std_connectivity': np.std([score for _, score in connectivity_scores]),
-            'min_connectivity': min(score for _, score in connectivity_scores),
-            'max_connectivity': max(score for _, score in connectivity_scores),
-            'median_connectivity': np.median([score for _, score in connectivity_scores])
-        }
+    # Basic evolution stats
+    evolution_stats = {
+        'total_words': len(all_results),
+        'mean_max_connectivity': np.mean([r['evolution']['max_connectivity'] for r in all_results]),
+        'mean_variance': np.mean([r['evolution']['variance'] for r in all_results]),
+        'mean_stability': np.mean([r['evolution']['stability'] for r in all_results])
     }
+    
+    analysis = {'evolution_stats': evolution_stats}
     
     # Add polysemy analysis if data available
     if polysemy_scores_file and os.path.exists(polysemy_scores_file):
@@ -223,33 +366,70 @@ def analyze_polysemy_connectivity_relationship(
             with open(polysemy_scores_file, 'r') as f:
                 polysemy_data = json.load(f)
             
-            # Group by polysemy level
-            polysemy_groups = {'monosemous': [], 'low_polysemy': [], 'medium_polysemy': [], 'high_polysemy': []}
+            # Group results by polysemy level
+            polysemy_groups = {
+                'monosemous': [],
+                'low_polysemy': [],
+                'medium_polysemy': [],
+                'high_polysemy': []
+            }
             
-            for word, connectivity in connectivity_scores:
+            for result in all_results:
+                word = result['word']
                 polysemy = polysemy_data.get(word, 1)
                 
                 if polysemy == 1:
-                    polysemy_groups['monosemous'].append(connectivity)
+                    polysemy_groups['monosemous'].append(result)
                 elif polysemy <= 3:
-                    polysemy_groups['low_polysemy'].append(connectivity)
+                    polysemy_groups['low_polysemy'].append(result)
                 elif polysemy <= 10:
-                    polysemy_groups['medium_polysemy'].append(connectivity)
+                    polysemy_groups['medium_polysemy'].append(result)
                 else:
-                    polysemy_groups['high_polysemy'].append(connectivity)
+                    polysemy_groups['high_polysemy'].append(result)
             
-            # Calculate stats for each group
-            polysemy_analysis = {}
-            for group, connectivities in polysemy_groups.items():
-                if connectivities:
-                    polysemy_analysis[group] = {
-                        'count': len(connectivities),
-                        'mean_connectivity': np.mean(connectivities),
-                        'std_connectivity': np.std(connectivities),
-                        'median_connectivity': np.median(connectivities)
+            # Calculate evolution patterns for each polysemy group
+            polysemy_evolution = {}
+            for group, results in polysemy_groups.items():
+                if results:
+                    polysemy_evolution[group] = {
+                        'count': len(results),
+                        'mean_max_connectivity': np.mean([r['evolution']['max_connectivity'] for r in results]),
+                        'mean_variance': np.mean([r['evolution']['variance'] for r in results]),
+                        'mean_stability': np.mean([r['evolution']['stability'] for r in results]),
+                        'mean_peak_layer': np.mean([r['evolution']['peak_layer'] for r in results])
                     }
             
-            analysis['polysemy_analysis'] = polysemy_analysis
+            analysis['polysemy_evolution'] = polysemy_evolution
+            
+            # Check if polysemy correlates with evolution patterns
+            if len(all_results) > 10:
+                from scipy import stats
+                polysemy_values = []
+                max_connectivity_values = []
+                variance_values = []
+                
+                for result in all_results:
+                    word = result['word']
+                    if word in polysemy_data:
+                        polysemy_values.append(polysemy_data[word])
+                        max_connectivity_values.append(result['evolution']['max_connectivity'])
+                        variance_values.append(result['evolution']['variance'])
+                
+                if len(polysemy_values) > 10:
+                    # Compute correlations
+                    corr_connectivity, p_connectivity = stats.pearsonr(polysemy_values, max_connectivity_values)
+                    corr_variance, p_variance = stats.pearsonr(polysemy_values, variance_values)
+                    
+                    analysis['correlations'] = {
+                        'polysemy_vs_max_connectivity': {
+                            'correlation': corr_connectivity,
+                            'p_value': p_connectivity
+                        },
+                        'polysemy_vs_variance': {
+                            'correlation': corr_variance,
+                            'p_value': p_variance
+                        }
+                    }
             
         except Exception as e:
             print(f"Warning: Could not load polysemy analysis: {e}")
@@ -273,7 +453,7 @@ def load_checkpoint(filepath: str) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Compute semantic connectivity scores for polysemy-based vocabulary sample"
+        description="Compute layer-wise semantic connectivity evolution for vocabulary samples"
     )
     parser.add_argument(
         '--words', 
@@ -330,7 +510,7 @@ def main():
     
     args = parser.parse_args()
     
-    print(f"🚀 Day 2-3: Semantic Connectivity Analysis")
+    print(f"🚀 Day 2-3: Layer-wise Semantic Connectivity Analysis")
     print(f"Using device: {args.device}")
     
     # Load word list
@@ -348,54 +528,56 @@ def main():
         model = AutoModel.from_pretrained(args.model).to(args.device)
         model.eval()
         print(f"✅ Model loaded successfully")
+        print(f"Model has {model.config.num_hidden_layers} layers")
     except Exception as e:
         print(f"❌ Error loading model: {e}")
         sys.exit(1)
     
     # Check for checkpoint
-    connectivity_scores = []
+    all_results = []
     processed_words = set()
     
     if args.resume and os.path.exists(args.checkpoint):
         checkpoint = load_checkpoint(args.checkpoint)
         if checkpoint:
-            connectivity_scores = [(w, s) for w, s in checkpoint.get('scores', [])]
-            processed_words = set(w for w, _ in connectivity_scores)
+            all_results = checkpoint.get('results', [])
+            processed_words = set(r['word'] for r in all_results)
             print(f"📁 Resumed from checkpoint: {len(processed_words)} words already processed")
     
     # Process words
     remaining_words = [w for w in sample_words if w not in processed_words]
     
-    print(f"🔄 Computing semantic connectivity for {len(remaining_words)} words...")
+    print(f"🔄 Computing layer-wise connectivity for {len(remaining_words)} words...")
     print(f"📊 Using {args.sample_size} comparison samples per word, threshold {args.threshold}")
     
     try:
         for i, word in enumerate(tqdm(remaining_words, desc="Processing words")):
-            score = semantic_connectivity(
-                word, model, tokenizer, sample_words, args.device, args.threshold, args.sample_size
+            result = analyze_word_across_layers(
+                word, model, tokenizer, sample_words, args.device, 
+                threshold=args.threshold, sample_size=args.sample_size
             )
-            connectivity_scores.append((word, score))
+            all_results.append(result)
             
             # Save checkpoint every 100 words
             if (i + 1) % 100 == 0:
-                save_checkpoint(args.checkpoint, {'scores': connectivity_scores})
+                save_checkpoint(args.checkpoint, {'results': all_results})
         
         # Final save
-        save_checkpoint(args.checkpoint, {'scores': connectivity_scores})
+        save_checkpoint(args.checkpoint, {'results': all_results})
         
     except KeyboardInterrupt:
         print("\n⚠️ Interrupted! Saving checkpoint...")
-        save_checkpoint(args.checkpoint, {'scores': connectivity_scores})
+        save_checkpoint(args.checkpoint, {'results': all_results})
         sys.exit(1)
     
-    # Find outliers
-    print("\n🔍 Identifying connectivity outliers...")
-    outliers = find_connectivity_outliers(connectivity_scores)
+    # Find evolution outliers
+    print("\n🔍 Identifying connectivity evolution patterns...")
+    outliers = find_evolution_outliers(all_results)
     
-    # Analyze connectivity patterns
-    print("📈 Analyzing connectivity patterns...")
-    analysis = analyze_polysemy_connectivity_relationship(
-        connectivity_scores, args.polysemy_file
+    # Analyze connectivity patterns with polysemy
+    print("📈 Analyzing connectivity evolution patterns...")
+    analysis = analyze_polysemy_evolution_relationship(
+        all_results, args.polysemy_file
     )
     
     # Prepare results
@@ -407,14 +589,12 @@ def main():
             'threshold': args.threshold,
             'sample_size': args.sample_size,
             'device': args.device,
-            'total_processed': len(connectivity_scores)
+            'total_processed': len(all_results),
+            'layers_analyzed': all_results[0]['layers_analyzed'] if all_results else []
         },
-        'outliers': {
-            'top_50': outliers['top_50_connected'],
-            'bottom_50': outliers['bottom_50_connected'],
-            'random_100': outliers['random_100']
-        },
-        'analysis': analysis
+        'outliers': outliers,
+        'analysis': analysis,
+        'word_results': all_results  # Full layer-wise data for each word
     }
     
     # Save results
@@ -423,31 +603,53 @@ def main():
         json.dump(results, f, indent=2)
     
     # Print summary
-    stats = analysis['connectivity_stats']
+    stats = analysis['evolution_stats']
     print("\n" + "="*60)
-    print("📊 SEMANTIC CONNECTIVITY ANALYSIS SUMMARY")
+    print("📊 LAYER-WISE CONNECTIVITY EVOLUTION SUMMARY")
     print("="*60)
     print(f"Total words processed: {stats['total_words']:,}")
-    print(f"Mean connectivity: {stats['mean_connectivity']:.2f}")
-    print(f"Standard deviation: {stats['std_connectivity']:.2f}")
-    print(f"Median connectivity: {stats['median_connectivity']:.2f}")
-    print(f"Range: [{stats['min_connectivity']:.0f}, {stats['max_connectivity']:.0f}]")
+    print(f"Mean max connectivity: {stats['mean_max_connectivity']:.2f}")
+    print(f"Mean variance across layers: {stats['mean_variance']:.2f}")
+    print(f"Mean stability: {stats['mean_stability']:.2f}")
     
     # Print polysemy analysis if available
-    if 'polysemy_analysis' in analysis:
-        print(f"\n📚 POLYSEMY vs CONNECTIVITY ANALYSIS")
+    if 'polysemy_evolution' in analysis:
+        print(f"\n📚 POLYSEMY vs CONNECTIVITY EVOLUTION")
         print("-" * 40)
-        for group, stats in analysis['polysemy_analysis'].items():
+        for group, stats in analysis['polysemy_evolution'].items():
             print(f"{group.replace('_', ' ').title():15}: {stats['count']:4d} words, "
-                  f"mean connectivity: {stats['mean_connectivity']:5.2f}")
+                  f"max conn: {stats['mean_max_connectivity']:5.1f}, "
+                  f"variance: {stats['mean_variance']:5.1f}")
     
-    print(f"\n🏆 Top 10 most connected words:")
-    for i, (word, score) in enumerate(outliers['top_50_connected'][:10], 1):
-        print(f"  {i:2d}. {word:15}: {score:3d} connections")
+    # Print correlations if available
+    if 'correlations' in analysis:
+        print(f"\n📊 CORRELATIONS")
+        print("-" * 40)
+        corr = analysis['correlations']
+        if 'polysemy_vs_max_connectivity' in corr:
+            r = corr['polysemy_vs_max_connectivity']['correlation']
+            p = corr['polysemy_vs_max_connectivity']['p_value']
+            print(f"Polysemy vs Max Connectivity: r={r:.3f}, p={p:.3f}")
+        if 'polysemy_vs_variance' in corr:
+            r = corr['polysemy_vs_variance']['correlation']
+            p = corr['polysemy_vs_variance']['p_value']
+            print(f"Polysemy vs Variance: r={r:.3f}, p={p:.3f}")
     
-    print(f"\n🔻 Bottom 10 least connected words:")
-    for i, (word, score) in enumerate(outliers['bottom_50_connected'][-10:], 1):
-        print(f"  {i:2d}. {word:15}: {score:3d} connections")
+    print(f"\n🏆 Top 10 highest connectivity words:")
+    for i, (word, score) in enumerate(outliers['highest_connectivity'][:10], 1):
+        print(f"  {i:2d}. {word:15}: {score:3.0f} max connections")
+    
+    print(f"\n🎢 Top 10 most dynamic words (highest variance):")
+    for i, (word, variance) in enumerate(outliers['highest_variance'][:10], 1):
+        print(f"  {i:2d}. {word:15}: variance={variance:6.1f}")
+    
+    # Print peak layer distribution
+    if 'peak_by_layer' in outliers:
+        print(f"\n📍 Peak connectivity by layer:")
+        for layer_key, words in sorted(outliers['peak_by_layer'].items()):
+            if words:
+                layer_num = int(layer_key.split('_')[1])
+                print(f"  Layer {layer_num:2d}: {len(words)} words peak here")
     
     # Clean up checkpoint if successful
     if os.path.exists(args.checkpoint):

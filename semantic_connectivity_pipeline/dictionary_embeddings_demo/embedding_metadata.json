@@ -1,0 +1,14 @@
+{
+  "model": "/Users/lee/fun/learningSlice/models/gemma-2b",
+  "total_words": 1000,
+  "layers": [
+    0,
+    4,
+    9,
+    13,
+    18
+  ],
+  "embedding_dim": 2048,
+  "device": "cpu",
+  "timestamp": "2025-07-27 21:34:24"
+}

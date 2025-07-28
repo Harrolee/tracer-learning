@@ -1,0 +1,2 @@
+word,layer,feature_id,activation_strength,feature_type
+example,0,f_0_123,0.85,syntactic

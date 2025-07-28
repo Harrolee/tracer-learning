@@ -1,0 +1,28 @@
+{
+  "model": "/Users/lee/fun/learningSlice/models/gemma-2b",
+  "total_words": 50,
+  "layers_analyzed": [
+    0,
+    4,
+    9,
+    13,
+    18
+  ],
+  "threshold": 0.7,
+  "device": "mps",
+  "csv_files": {
+    "word_summary": "word_summary.csv",
+    "layer_connectivity": "layer_connectivity.csv",
+    "semantic_neighbors": "semantic_neighbors.csv",
+    "connectivity_trajectories": "connectivity_trajectories.csv",
+    "feature_template": "feature_activations_template.csv"
+  },
+  "column_descriptions": {
+    "polysemy_score": "Number of WordNet synsets for the word",
+    "connectivity_count": "Number of words with similarity > threshold",
+    "connectivity_variance": "Variance of connectivity across layers",
+    "connectivity_stability": "1 / (1 + variance), higher = more stable",
+    "peak_layer": "Layer with highest connectivity",
+    "trough_layer": "Layer with lowest connectivity"
+  }
+}

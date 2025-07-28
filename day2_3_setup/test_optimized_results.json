@@ -1,0 +1,7965 @@
+{
+  "metadata": {
+    "model": "/Users/lee/fun/learningSlice/models/gemma-2b",
+    "word_source": "test_sample_200.json",
+    "total_words": 50,
+    "threshold": 0.7,
+    "device": "mps",
+    "layers_analyzed": [
+      0,
+      4,
+      9,
+      13,
+      18
+    ],
+    "total_time": 9.701679944992065,
+    "embedding_time": 3.276655912399292
+  },
+  "outliers": {
+    "highest_connectivity": [
+      [
+        "microscopically",
+        49
+      ],
+      [
+        "blood",
+        49
+      ],
+      [
+        "moneymaking",
+        49
+      ],
+      [
+        "behave",
+        49
+      ],
+      [
+        "allot",
+        49
+      ],
+      [
+        "spile",
+        49
+      ],
+      [
+        "flathead",
+        49
+      ],
+      [
+        "wiseness",
+        49
+      ],
+      [
+        "creeper",
+        49
+      ],
+      [
+        "bourgeois",
+        49
+      ],
+      [
+        "obadiah",
+        49
+      ],
+      [
+        "durham",
+        49
+      ],
+      [
+        "restrictiveness",
+        49
+      ],
+      [
+        "privy",
+        49
+      ],
+      [
+        "cunningly",
+        49
+      ],
+      [
+        "formalism",
+        49
+      ],
+      [
+        "patter",
+        49
+      ],
+      [
+        "sink",
+        49
+      ],
+      [
+        "bruneian",
+        49
+      ],
+      [
+        "bleak",
+        49
+      ],
+      [
+        "cyprian",
+        49
+      ],
+      [
+        "pointless",
+        49
+      ],
+      [
+        "leeward",
+        49
+      ],
+      [
+        "maize",
+        49
+      ],
+      [
+        "illegitimacy",
+        49
+      ],
+      [
+        "variance",
+        49
+      ],
+      [
+        "enlightened",
+        49
+      ],
+      [
+        "membrane",
+        49
+      ],
+      [
+        "strange",
+        49
+      ],
+      [
+        "calcification",
+        49
+      ],
+      [
+        "pelvis",
+        49
+      ],
+      [
+        "dibble",
+        49
+      ],
+      [
+        "born",
+        49
+      ],
+      [
+        "parenthesis",
+        49
+      ],
+      [
+        "qualify",
+        49
+      ],
+      [
+        "season",
+        49
+      ],
+      [
+        "freightage",
+        49
+      ],
+      [
+        "endure",
+        49
+      ],
+      [
+        "resiliency",
+        49
+      ],
+      [
+        "rick",
+        49
+      ],
+      [
+        "ruby",
+        49
+      ],
+      [
+        "papyrus",
+        49
+      ],
+      [
+        "adopt",
+        49
+      ],
+      [
+        "cornhusking",
+        49
+      ],
+      [
+        "pane",
+        49
+      ],
+      [
+        "peacekeeping",
+        49
+      ],
+      [
+        "wolfish",
+        49
+      ],
+      [
+        "rod",
+        49
+      ],
+      [
+        "delegation",
+        49
+      ],
+      [
+        "oversimplification",
+        49
+      ]
+    ],
+    "lowest_connectivity": [
+      [
+        "microscopically",
+        49
+      ],
+      [
+        "blood",
+        49
+      ],
+      [
+        "moneymaking",
+        49
+      ],
+      [
+        "behave",
+        49
+      ],
+      [
+        "allot",
+        49
+      ],
+      [
+        "spile",
+        49
+      ],
+      [
+        "flathead",
+        49
+      ],
+      [
+        "wiseness",
+        49
+      ],
+      [
+        "creeper",
+        49
+      ],
+      [
+        "bourgeois",
+        49
+      ],
+      [
+        "obadiah",
+        49
+      ],
+      [
+        "durham",
+        49
+      ],
+      [
+        "restrictiveness",
+        49
+      ],
+      [
+        "privy",
+        49
+      ],
+      [
+        "cunningly",
+        49
+      ],
+      [
+        "formalism",
+        49
+      ],
+      [
+        "patter",
+        49
+      ],
+      [
+        "sink",
+        49
+      ],
+      [
+        "bruneian",
+        49
+      ],
+      [
+        "bleak",
+        49
+      ],
+      [
+        "cyprian",
+        49
+      ],
+      [
+        "pointless",
+        49
+      ],
+      [
+        "leeward",
+        49
+      ],
+      [
+        "maize",
+        49
+      ],
+      [
+        "illegitimacy",
+        49
+      ],
+      [
+        "variance",
+        49
+      ],
+      [
+        "enlightened",
+        49
+      ],
+      [
+        "membrane",
+        49
+      ],
+      [
+        "strange",
+        49
+      ],
+      [
+        "calcification",
+        49
+      ],
+      [
+        "pelvis",
+        49
+      ],
+      [
+        "dibble",
+        49
+      ],
+      [
+        "born",
+        49
+      ],
+      [
+        "parenthesis",
+        49
+      ],
+      [
+        "qualify",
+        49
+      ],
+      [
+        "season",
+        49
+      ],
+      [
+        "freightage",
+        49
+      ],
+      [
+        "endure",
+        49
+      ],
+      [
+        "resiliency",
+        49
+      ],
+      [
+        "rick",
+        49
+      ],
+      [
+        "ruby",
+        49
+      ],
+      [
+        "papyrus",
+        49
+      ],
+      [
+        "adopt",
+        49
+      ],
+      [
+        "cornhusking",
+        49
+      ],
+      [
+        "pane",
+        49
+      ],
+      [
+        "peacekeeping",
+        49
+      ],
+      [
+        "wolfish",
+        49
+      ],
+      [
+        "rod",
+        49
+      ],
+      [
+        "delegation",
+        49
+      ],
+      [
+        "oversimplification",
+        49
+      ]
+    ],
+    "highest_variance": [
+      [
+        "microscopically",
+        384.16
+      ],
+      [
+        "blood",
+        384.16
+      ],
+      [
+        "moneymaking",
+        384.16
+      ],
+      [
+        "behave",
+        384.16
+      ],
+      [
+        "allot",
+        384.16
+      ],
+      [
+        "spile",
+        384.16
+      ],
+      [
+        "flathead",
+        384.16
+      ],
+      [
+        "creeper",
+        384.16
+      ],
+      [
+        "bourgeois",
+        384.16
+      ],
+      [
+        "durham",
+        384.16
+      ],
+      [
+        "privy",
+        384.16
+      ],
+      [
+        "formalism",
+        384.16
+      ],
+      [
+        "patter",
+        384.16
+      ],
+      [
+        "sink",
+        384.16
+      ],
+      [
+        "bleak",
+        384.16
+      ],
+      [
+        "pointless",
+        384.16
+      ],
+      [
+        "leeward",
+        384.16
+      ],
+      [
+        "maize",
+        384.16
+      ],
+      [
+        "variance",
+        384.16
+      ],
+      [
+        "membrane",
+        384.16
+      ],
+      [
+        "strange",
+        384.16
+      ],
+      [
+        "calcification",
+        384.16
+      ],
+      [
+        "pelvis",
+        384.16
+      ],
+      [
+        "dibble",
+        384.16
+      ],
+      [
+        "born",
+        384.16
+      ],
+      [
+        "parenthesis",
+        384.16
+      ],
+      [
+        "qualify",
+        384.16
+      ],
+      [
+        "season",
+        384.16
+      ],
+      [
+        "endure",
+        384.16
+      ],
+      [
+        "rick",
+        384.16
+      ],
+      [
+        "ruby",
+        384.16
+      ],
+      [
+        "adopt",
+        384.16
+      ],
+      [
+        "pane",
+        384.16
+      ],
+      [
+        "peacekeeping",
+        384.16
+      ],
+      [
+        "wolfish",
+        384.16
+      ],
+      [
+        "rod",
+        384.16
+      ],
+      [
+        "delegation",
+        384.16
+      ],
+      [
+        "wiseness",
+        219.04000000000002
+      ],
+      [
+        "obadiah",
+        219.04000000000002
+      ],
+      [
+        "restrictiveness",
+        219.04000000000002
+      ],
+      [
+        "cunningly",
+        219.04000000000002
+      ],
+      [
+        "bruneian",
+        219.04000000000002
+      ],
+      [
+        "cyprian",
+        219.04000000000002
+      ],
+      [
+        "illegitimacy",
+        219.04000000000002
+      ],
+      [
+        "enlightened",
+        219.04000000000002
+      ],
+      [
+        "freightage",
+        219.04000000000002
+      ],
+      [
+        "resiliency",
+        219.04000000000002
+      ],
+      [
+        "papyrus",
+        219.04000000000002
+      ],
+      [
+        "cornhusking",
+        219.04000000000002
+      ],
+      [
+        "oversimplification",
+        219.04000000000002
+      ]
+    ],
+    "most_stable": [
+      [
+        "wiseness",
+        0.0045446282494091975
+      ],
+      [
+        "obadiah",
+        0.0045446282494091975
+      ],
+      [
+        "restrictiveness",
+        0.0045446282494091975
+      ],
+      [
+        "cunningly",
+        0.0045446282494091975
+      ],
+      [
+        "bruneian",
+        0.0045446282494091975
+      ],
+      [
+        "cyprian",
+        0.0045446282494091975
+      ],
+      [
+        "illegitimacy",
+        0.0045446282494091975
+      ],
+      [
+        "enlightened",
+        0.0045446282494091975
+      ],
+      [
+        "freightage",
+        0.0045446282494091975
+      ],
+      [
+        "resiliency",
+        0.0045446282494091975
+      ],
+      [
+        "papyrus",
+        0.0045446282494091975
+      ],
+      [
+        "cornhusking",
+        0.0045446282494091975
+      ],
+      [
+        "oversimplification",
+        0.0045446282494091975
+      ],
+      [
+        "microscopically",
+        0.0025963236057742235
+      ],
+      [
+        "blood",
+        0.0025963236057742235
+      ],
+      [
+        "moneymaking",
+        0.0025963236057742235
+      ],
+      [
+        "behave",
+        0.0025963236057742235
+      ],
+      [
+        "allot",
+        0.0025963236057742235
+      ],
+      [
+        "spile",
+        0.0025963236057742235
+      ],
+      [
+        "flathead",
+        0.0025963236057742235
+      ],
+      [
+        "creeper",
+        0.0025963236057742235
+      ],
+      [
+        "bourgeois",
+        0.0025963236057742235
+      ],
+      [
+        "durham",
+        0.0025963236057742235
+      ],
+      [
+        "privy",
+        0.0025963236057742235
+      ],
+      [
+        "formalism",
+        0.0025963236057742235
+      ],
+      [
+        "patter",
+        0.0025963236057742235
+      ],
+      [
+        "sink",
+        0.0025963236057742235
+      ],
+      [
+        "bleak",
+        0.0025963236057742235
+      ],
+      [
+        "pointless",
+        0.0025963236057742235
+      ],
+      [
+        "leeward",
+        0.0025963236057742235
+      ],
+      [
+        "maize",
+        0.0025963236057742235
+      ],
+      [
+        "variance",
+        0.0025963236057742235
+      ],
+      [
+        "membrane",
+        0.0025963236057742235
+      ],
+      [
+        "strange",
+        0.0025963236057742235
+      ],
+      [
+        "calcification",
+        0.0025963236057742235
+      ],
+      [
+        "pelvis",
+        0.0025963236057742235
+      ],
+      [
+        "dibble",
+        0.0025963236057742235
+      ],
+      [
+        "born",
+        0.0025963236057742235
+      ],
+      [
+        "parenthesis",
+        0.0025963236057742235
+      ],
+      [
+        "qualify",
+        0.0025963236057742235
+      ],
+      [
+        "season",
+        0.0025963236057742235
+      ],
+      [
+        "endure",
+        0.0025963236057742235
+      ],
+      [
+        "rick",
+        0.0025963236057742235
+      ],
+      [
+        "ruby",
+        0.0025963236057742235
+      ],
+      [
+        "adopt",
+        0.0025963236057742235
+      ],
+      [
+        "pane",
+        0.0025963236057742235
+      ],
+      [
+        "peacekeeping",
+        0.0025963236057742235
+      ],
+      [
+        "wolfish",
+        0.0025963236057742235
+      ],
+      [
+        "rod",
+        0.0025963236057742235
+      ],
+      [
+        "delegation",
+        0.0025963236057742235
+      ]
+    ],
+    "total_analyzed": 50,
+    "peak_by_layer": {
+      "layer_0": [
+        [
+          "microscopically",
+          49
+        ],
+        [
+          "blood",
+          49
+        ],
+        [
+          "moneymaking",
+          49
+        ],
+        [
+          "behave",
+          49
+        ],
+        [
+          "allot",
+          49
+        ],
+        [
+          "spile",
+          49
+        ],
+        [
+          "flathead",
+          49
+        ],
+        [
+          "wiseness",
+          49
+        ],
+        [
+          "creeper",
+          49
+        ],
+        [
+          "bourgeois",
+          49
+        ]
+      ]
+    }
+  },
+  "analysis": {
+    "evolution_stats": {
+      "total_words": 50,
+      "mean_max_connectivity": 49.0,
+      "mean_variance": 341.22880000000004,
+      "mean_stability": 0.0031028828131193166
+    }
+  },
+  "word_results": [
+    {
+      "word": "microscopically",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9487055381950067,
+          "max_similarity": 0.965969443321228,
+          "top_neighbors": [
+            [
+              "creeper",
+              0.965969443321228
+            ],
+            [
+              "peacekeeping",
+              0.9647011160850525
+            ],
+            [
+              "bourgeois",
+              0.9631078839302063
+            ],
+            [
+              "oversimplification",
+              0.9630960822105408
+            ],
+            [
+              "calcification",
+              0.9626017808914185
+            ],
+            [
+              "cornhusking",
+              0.9622628092765808
+            ],
+            [
+              "freightage",
+              0.9615318179130554
+            ],
+            [
+              "durham",
+              0.9610149264335632
+            ],
+            [
+              "restrictiveness",
+              0.9610038995742798
+            ],
+            [
+              "cunningly",
+              0.9608075618743896
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "blood",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9453560345026911,
+          "max_similarity": 0.9807901978492737,
+          "top_neighbors": [
+            [
+              "rick",
+              0.9807901978492737
+            ],
+            [
+              "ruby",
+              0.9805242419242859
+            ],
+            [
+              "season",
+              0.9789111614227295
+            ],
+            [
+              "variance",
+              0.9783725738525391
+            ],
+            [
+              "sink",
+              0.9782674312591553
+            ],
+            [
+              "born",
+              0.9781821370124817
+            ],
+            [
+              "rod",
+              0.9780720472335815
+            ],
+            [
+              "membrane",
+              0.9764580726623535
+            ],
+            [
+              "pane",
+              0.9760679006576538
+            ],
+            [
+              "strange",
+              0.9659927487373352
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "moneymaking",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9622007632742122,
+          "max_similarity": 0.9752171039581299,
+          "top_neighbors": [
+            [
+              "peacekeeping",
+              0.9752171039581299
+            ],
+            [
+              "calcification",
+              0.9720725417137146
+            ],
+            [
+              "pointless",
+              0.9710668921470642
+            ],
+            [
+              "privy",
+              0.9709818363189697
+            ],
+            [
+              "dibble",
+              0.9708659648895264
+            ],
+            [
+              "wolfish",
+              0.9705345034599304
+            ],
+            [
+              "patter",
+              0.9703155755996704
+            ],
+            [
+              "behave",
+              0.9701700806617737
+            ],
+            [
+              "formalism",
+              0.969890832901001
+            ],
+            [
+              "qualify",
+              0.969890832901001
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "behave",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9582799806886789,
+          "max_similarity": 0.9704611897468567,
+          "top_neighbors": [
+            [
+              "bleak",
+              0.9704611897468567
+            ],
+            [
+              "moneymaking",
+              0.9701700806617737
+            ],
+            [
+              "maize",
+              0.9701396822929382
+            ],
+            [
+              "dibble",
+              0.9697856903076172
+            ],
+            [
+              "patter",
+              0.9697389006614685
+            ],
+            [
+              "allot",
+              0.9685959219932556
+            ],
+            [
+              "spile",
+              0.9684304594993591
+            ],
+            [
+              "endure",
+              0.9680665731430054
+            ],
+            [
+              "wolfish",
+              0.967248797416687
+            ],
+            [
+              "privy",
+              0.966908872127533
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "allot",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9589204824700648,
+          "max_similarity": 0.973417341709137,
+          "top_neighbors": [
+            [
+              "bleak",
+              0.973417341709137
+            ],
+            [
+              "maize",
+              0.9711317420005798
+            ],
+            [
+              "patter",
+              0.9705793261528015
+            ],
+            [
+              "spile",
+              0.9693152904510498
+            ],
+            [
+              "privy",
+              0.9689038991928101
+            ],
+            [
+              "endure",
+              0.9687688946723938
+            ],
+            [
+              "behave",
+              0.9685959219932556
+            ],
+            [
+              "pelvis",
+              0.967863142490387
+            ],
+            [
+              "dibble",
+              0.9677249193191528
+            ],
+            [
+              "durham",
+              0.9676743149757385
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "spile",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9597015076754044,
+          "max_similarity": 0.9726267457008362,
+          "top_neighbors": [
+            [
+              "bleak",
+              0.9726267457008362
+            ],
+            [
+              "privy",
+              0.9716792702674866
+            ],
+            [
+              "patter",
+              0.9710365533828735
+            ],
+            [
+              "maize",
+              0.9707789421081543
+            ],
+            [
+              "dibble",
+              0.9704681038856506
+            ],
+            [
+              "allot",
+              0.9693152904510498
+            ],
+            [
+              "moneymaking",
+              0.968752384185791
+            ],
+            [
+              "pointless",
+              0.9684957265853882
+            ],
+            [
+              "behave",
+              0.9684304594993591
+            ],
+            [
+              "durham",
+              0.9683482646942139
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "flathead",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9572372363538159,
+          "max_similarity": 0.9694031476974487,
+          "top_neighbors": [
+            [
+              "moneymaking",
+              0.9694031476974487
+            ],
+            [
+              "bleak",
+              0.9671953320503235
+            ],
+            [
+              "pointless",
+              0.967171847820282
+            ],
+            [
+              "behave",
+              0.9668163657188416
+            ],
+            [
+              "spile",
+              0.9664613008499146
+            ],
+            [
+              "dibble",
+              0.9663781523704529
+            ],
+            [
+              "patter",
+              0.966372549533844
+            ],
+            [
+              "privy",
+              0.9662514925003052
+            ],
+            [
+              "calcification",
+              0.9660327434539795
+            ],
+            [
+              "wolfish",
+              0.9658912420272827
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "wiseness",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9510244666313639,
+          "max_similarity": 0.9685502648353577,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9685502648353577
+            ],
+            [
+              "bruneian",
+              0.9677273631095886
+            ],
+            [
+              "obadiah",
+              0.9672473669052124
+            ],
+            [
+              "freightage",
+              0.9667313694953918
+            ],
+            [
+              "cunningly",
+              0.9664717316627502
+            ],
+            [
+              "enlightened",
+              0.9659039974212646
+            ],
+            [
+              "durham",
+              0.9655899405479431
+            ],
+            [
+              "papyrus",
+              0.9645569920539856
+            ],
+            [
+              "cornhusking",
+              0.9642246961593628
+            ],
+            [
+              "resiliency",
+              0.9639456868171692
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "enlightened",
+              0.9791136384010315
+            ],
+            [
+              "cunningly",
+              0.978572428226471
+            ],
+            [
+              "resiliency",
+              0.977226734161377
+            ],
+            [
+              "cornhusking",
+              0.9738552570343018
+            ],
+            [
+              "freightage",
+              0.9730855226516724
+            ],
+            [
+              "bruneian",
+              0.9728805422782898
+            ],
+            [
+              "obadiah",
+              0.9726294279098511
+            ],
+            [
+              "oversimplification",
+              0.9715660810470581
+            ],
+            [
+              "restrictiveness",
+              0.9707628488540649
+            ],
+            [
+              "cyprian",
+              0.9691838622093201
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "enlightened",
+              0.9912949800491333
+            ],
+            [
+              "resiliency",
+              0.9912039041519165
+            ],
+            [
+              "cunningly",
+              0.9901308417320251
+            ],
+            [
+              "freightage",
+              0.9893204569816589
+            ],
+            [
+              "bruneian",
+              0.9890961647033691
+            ],
+            [
+              "obadiah",
+              0.9889423847198486
+            ],
+            [
+              "cornhusking",
+              0.9884521961212158
+            ],
+            [
+              "restrictiveness",
+              0.988427460193634
+            ],
+            [
+              "cyprian",
+              0.9879945516586304
+            ],
+            [
+              "oversimplification",
+              0.9871461391448975
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9903059005737305
+            ],
+            [
+              "enlightened",
+              0.990199089050293
+            ],
+            [
+              "cunningly",
+              0.9885031580924988
+            ],
+            [
+              "freightage",
+              0.988213300704956
+            ],
+            [
+              "obadiah",
+              0.9876858592033386
+            ],
+            [
+              "cornhusking",
+              0.987277626991272
+            ],
+            [
+              "restrictiveness",
+              0.987135648727417
+            ],
+            [
+              "bruneian",
+              0.9869755506515503
+            ],
+            [
+              "cyprian",
+              0.9866194725036621
+            ],
+            [
+              "papyrus",
+              0.984616756439209
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "enlightened",
+              0.962565004825592
+            ],
+            [
+              "bruneian",
+              0.9489328265190125
+            ],
+            [
+              "papyrus",
+              0.9434880018234253
+            ],
+            [
+              "resiliency",
+              0.9419630169868469
+            ],
+            [
+              "restrictiveness",
+              0.9416317939758301
+            ],
+            [
+              "obadiah",
+              0.9393764734268188
+            ],
+            [
+              "cyprian",
+              0.9366030097007751
+            ],
+            [
+              "freightage",
+              0.9330852627754211
+            ],
+            [
+              "cornhusking",
+              0.9292870163917542
+            ],
+            [
+              "cunningly",
+              0.9231201410293579
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "creeper",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9499287495807726,
+          "max_similarity": 0.9667595624923706,
+          "top_neighbors": [
+            [
+              "cornhusking",
+              0.9667595624923706
+            ],
+            [
+              "microscopically",
+              0.965969443321228
+            ],
+            [
+              "obadiah",
+              0.9654444456100464
+            ],
+            [
+              "durham",
+              0.9652739763259888
+            ],
+            [
+              "peacekeeping",
+              0.9649782776832581
+            ],
+            [
+              "cunningly",
+              0.964890718460083
+            ],
+            [
+              "bruneian",
+              0.964859127998352
+            ],
+            [
+              "oversimplification",
+              0.9645177125930786
+            ],
+            [
+              "wiseness",
+              0.9637477993965149
+            ],
+            [
+              "wolfish",
+              0.9634995460510254
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "bourgeois",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9512441523221075,
+          "max_similarity": 0.9642687439918518,
+          "top_neighbors": [
+            [
+              "calcification",
+              0.9642687439918518
+            ],
+            [
+              "microscopically",
+              0.9631078839302063
+            ],
+            [
+              "wolfish",
+              0.9629942774772644
+            ],
+            [
+              "peacekeeping",
+              0.9626906514167786
+            ],
+            [
+              "leeward",
+              0.9621397256851196
+            ],
+            [
+              "parenthesis",
+              0.9618452787399292
+            ],
+            [
+              "durham",
+              0.9617763161659241
+            ],
+            [
+              "moneymaking",
+              0.9613757729530334
+            ],
+            [
+              "cornhusking",
+              0.9604877829551697
+            ],
+            [
+              "creeper",
+              0.9602577090263367
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "obadiah",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9476185757286695,
+          "max_similarity": 0.9687416553497314,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9687416553497314
+            ],
+            [
+              "cyprian",
+              0.9678854942321777
+            ],
+            [
+              "wiseness",
+              0.9672473669052124
+            ],
+            [
+              "dibble",
+              0.9666793942451477
+            ],
+            [
+              "cunningly",
+              0.9663190841674805
+            ],
+            [
+              "freightage",
+              0.9655132293701172
+            ],
+            [
+              "creeper",
+              0.9654444456100464
+            ],
+            [
+              "resiliency",
+              0.9652067422866821
+            ],
+            [
+              "papyrus",
+              0.9649357199668884
+            ],
+            [
+              "oversimplification",
+              0.963998556137085
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9732750058174133
+            ],
+            [
+              "cunningly",
+              0.9728291034698486
+            ],
+            [
+              "wiseness",
+              0.9726294279098511
+            ],
+            [
+              "resiliency",
+              0.9718711972236633
+            ],
+            [
+              "freightage",
+              0.9710628390312195
+            ],
+            [
+              "cornhusking",
+              0.9707439541816711
+            ],
+            [
+              "oversimplification",
+              0.970317542552948
+            ],
+            [
+              "enlightened",
+              0.9688844680786133
+            ],
+            [
+              "papyrus",
+              0.9688515067100525
+            ],
+            [
+              "cyprian",
+              0.9681829810142517
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9890548586845398
+            ],
+            [
+              "bruneian",
+              0.9889836311340332
+            ],
+            [
+              "wiseness",
+              0.9889423847198486
+            ],
+            [
+              "freightage",
+              0.9882075786590576
+            ],
+            [
+              "cyprian",
+              0.9881107807159424
+            ],
+            [
+              "papyrus",
+              0.987768828868866
+            ],
+            [
+              "cunningly",
+              0.9871781468391418
+            ],
+            [
+              "cornhusking",
+              0.9868208169937134
+            ],
+            [
+              "restrictiveness",
+              0.9867244958877563
+            ],
+            [
+              "enlightened",
+              0.9862459301948547
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9876858592033386
+            ],
+            [
+              "bruneian",
+              0.9875208735466003
+            ],
+            [
+              "cyprian",
+              0.9872894287109375
+            ],
+            [
+              "resiliency",
+              0.9872864484786987
+            ],
+            [
+              "freightage",
+              0.9866825938224792
+            ],
+            [
+              "papyrus",
+              0.9855660200119019
+            ],
+            [
+              "cornhusking",
+              0.9853234887123108
+            ],
+            [
+              "enlightened",
+              0.9851135015487671
+            ],
+            [
+              "restrictiveness",
+              0.9847633838653564
+            ],
+            [
+              "cunningly",
+              0.9844603538513184
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9393764734268188
+            ],
+            [
+              "papyrus",
+              0.9375917911529541
+            ],
+            [
+              "enlightened",
+              0.9252851009368896
+            ],
+            [
+              "bruneian",
+              0.9221078753471375
+            ],
+            [
+              "cyprian",
+              0.9163461923599243
+            ],
+            [
+              "restrictiveness",
+              0.9110894203186035
+            ],
+            [
+              "cornhusking",
+              0.8914676308631897
+            ],
+            [
+              "freightage",
+              0.8909708261489868
+            ],
+            [
+              "resiliency",
+              0.8824742436408997
+            ],
+            [
+              "illegitimacy",
+              0.8818445205688477
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "durham",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9609664435289345,
+          "max_similarity": 0.9704648852348328,
+          "top_neighbors": [
+            [
+              "wolfish",
+              0.9704648852348328
+            ],
+            [
+              "bleak",
+              0.9701170921325684
+            ],
+            [
+              "patter",
+              0.9699609279632568
+            ],
+            [
+              "moneymaking",
+              0.9697867631912231
+            ],
+            [
+              "delegation",
+              0.9696826934814453
+            ],
+            [
+              "qualify",
+              0.969369113445282
+            ],
+            [
+              "calcification",
+              0.9693385362625122
+            ],
+            [
+              "dibble",
+              0.9692358374595642
+            ],
+            [
+              "privy",
+              0.9690585732460022
+            ],
+            [
+              "peacekeeping",
+              0.9689611792564392
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "restrictiveness",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9422526359558105,
+          "max_similarity": 0.9694918394088745,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9694918394088745
+            ],
+            [
+              "oversimplification",
+              0.9665956497192383
+            ],
+            [
+              "freightage",
+              0.9635937809944153
+            ],
+            [
+              "obadiah",
+              0.9633029103279114
+            ],
+            [
+              "wiseness",
+              0.9631502628326416
+            ],
+            [
+              "cornhusking",
+              0.9627878665924072
+            ],
+            [
+              "bruneian",
+              0.9623846411705017
+            ],
+            [
+              "microscopically",
+              0.9610038995742798
+            ],
+            [
+              "cunningly",
+              0.9606968760490417
+            ],
+            [
+              "creeper",
+              0.9604452848434448
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9768807888031006
+            ],
+            [
+              "wiseness",
+              0.9707628488540649
+            ],
+            [
+              "freightage",
+              0.970140278339386
+            ],
+            [
+              "enlightened",
+              0.9695566892623901
+            ],
+            [
+              "oversimplification",
+              0.969500720500946
+            ],
+            [
+              "cunningly",
+              0.9685468077659607
+            ],
+            [
+              "obadiah",
+              0.9665945768356323
+            ],
+            [
+              "bruneian",
+              0.9664608240127563
+            ],
+            [
+              "cornhusking",
+              0.9655958414077759
+            ],
+            [
+              "cyprian",
+              0.9655812382698059
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9910474419593811
+            ],
+            [
+              "wiseness",
+              0.988427460193634
+            ],
+            [
+              "freightage",
+              0.9882131218910217
+            ],
+            [
+              "oversimplification",
+              0.9875131845474243
+            ],
+            [
+              "enlightened",
+              0.9872828125953674
+            ],
+            [
+              "obadiah",
+              0.9867244958877563
+            ],
+            [
+              "cyprian",
+              0.986522912979126
+            ],
+            [
+              "cunningly",
+              0.9863708019256592
+            ],
+            [
+              "bruneian",
+              0.9861647486686707
+            ],
+            [
+              "cornhusking",
+              0.9854394793510437
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9904630184173584
+            ],
+            [
+              "wiseness",
+              0.987135648727417
+            ],
+            [
+              "freightage",
+              0.9865784049034119
+            ],
+            [
+              "enlightened",
+              0.9856906533241272
+            ],
+            [
+              "obadiah",
+              0.9847633838653564
+            ],
+            [
+              "oversimplification",
+              0.9844595789909363
+            ],
+            [
+              "cyprian",
+              0.9843897819519043
+            ],
+            [
+              "cunningly",
+              0.9840334057807922
+            ],
+            [
+              "cornhusking",
+              0.9839033484458923
+            ],
+            [
+              "bruneian",
+              0.9834228754043579
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.953415036201477
+            ],
+            [
+              "wiseness",
+              0.9416317939758301
+            ],
+            [
+              "enlightened",
+              0.9395676851272583
+            ],
+            [
+              "oversimplification",
+              0.9330936670303345
+            ],
+            [
+              "papyrus",
+              0.9327149987220764
+            ],
+            [
+              "illegitimacy",
+              0.927961528301239
+            ],
+            [
+              "bruneian",
+              0.9237956404685974
+            ],
+            [
+              "cyprian",
+              0.9235641956329346
+            ],
+            [
+              "cornhusking",
+              0.9223843812942505
+            ],
+            [
+              "freightage",
+              0.9115343689918518
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "privy",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9606753380931153,
+          "max_similarity": 0.9750769138336182,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9750769138336182
+            ],
+            [
+              "spile",
+              0.9716792702674866
+            ],
+            [
+              "bleak",
+              0.9714552164077759
+            ],
+            [
+              "pelvis",
+              0.9710594415664673
+            ],
+            [
+              "moneymaking",
+              0.9709818363189697
+            ],
+            [
+              "patter",
+              0.9704750776290894
+            ],
+            [
+              "dibble",
+              0.9700464010238647
+            ],
+            [
+              "durham",
+              0.9690585732460022
+            ],
+            [
+              "allot",
+              0.9689038991928101
+            ],
+            [
+              "maize",
+              0.9688185453414917
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "cunningly",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9476839449940896,
+          "max_similarity": 0.966552734375,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.966552734375
+            ],
+            [
+              "wiseness",
+              0.9664717316627502
+            ],
+            [
+              "obadiah",
+              0.9663190841674805
+            ],
+            [
+              "cyprian",
+              0.9650636315345764
+            ],
+            [
+              "creeper",
+              0.964890718460083
+            ],
+            [
+              "resiliency",
+              0.9641079306602478
+            ],
+            [
+              "cornhusking",
+              0.9630670547485352
+            ],
+            [
+              "enlightened",
+              0.9630537033081055
+            ],
+            [
+              "oversimplification",
+              0.962150514125824
+            ],
+            [
+              "freightage",
+              0.9618929028511047
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.978572428226471
+            ],
+            [
+              "enlightened",
+              0.9762998819351196
+            ],
+            [
+              "resiliency",
+              0.9749812483787537
+            ],
+            [
+              "bruneian",
+              0.9739802479743958
+            ],
+            [
+              "cornhusking",
+              0.973109781742096
+            ],
+            [
+              "oversimplification",
+              0.9730162620544434
+            ],
+            [
+              "obadiah",
+              0.9728291034698486
+            ],
+            [
+              "freightage",
+              0.9727597236633301
+            ],
+            [
+              "cyprian",
+              0.9706536531448364
+            ],
+            [
+              "restrictiveness",
+              0.9685468077659607
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9901308417320251
+            ],
+            [
+              "enlightened",
+              0.9889004826545715
+            ],
+            [
+              "resiliency",
+              0.9885700345039368
+            ],
+            [
+              "bruneian",
+              0.9873262643814087
+            ],
+            [
+              "obadiah",
+              0.9871781468391418
+            ],
+            [
+              "freightage",
+              0.9870091080665588
+            ],
+            [
+              "oversimplification",
+              0.9866861701011658
+            ],
+            [
+              "cornhusking",
+              0.9865921139717102
+            ],
+            [
+              "cyprian",
+              0.9864065647125244
+            ],
+            [
+              "restrictiveness",
+              0.9863708019256592
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9885031580924988
+            ],
+            [
+              "enlightened",
+              0.986542820930481
+            ],
+            [
+              "resiliency",
+              0.9863413572311401
+            ],
+            [
+              "obadiah",
+              0.9844603538513184
+            ],
+            [
+              "cornhusking",
+              0.9841213226318359
+            ],
+            [
+              "bruneian",
+              0.984110951423645
+            ],
+            [
+              "freightage",
+              0.9840620756149292
+            ],
+            [
+              "restrictiveness",
+              0.9840334057807922
+            ],
+            [
+              "cyprian",
+              0.9833881258964539
+            ],
+            [
+              "oversimplification",
+              0.9827234148979187
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "oversimplification",
+              0.9296270608901978
+            ],
+            [
+              "wiseness",
+              0.9231201410293579
+            ],
+            [
+              "restrictiveness",
+              0.9020358920097351
+            ],
+            [
+              "cornhusking",
+              0.8993582725524902
+            ],
+            [
+              "resiliency",
+              0.8958231210708618
+            ],
+            [
+              "enlightened",
+              0.8920601606369019
+            ],
+            [
+              "illegitimacy",
+              0.8756718039512634
+            ],
+            [
+              "papyrus",
+              0.8756422400474548
+            ],
+            [
+              "obadiah",
+              0.8721322417259216
+            ],
+            [
+              "bruneian",
+              0.8709316253662109
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "formalism",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.960017487710836,
+          "max_similarity": 0.9706291556358337,
+          "top_neighbors": [
+            [
+              "calcification",
+              0.9706291556358337
+            ],
+            [
+              "wolfish",
+              0.970486044883728
+            ],
+            [
+              "maize",
+              0.9701626300811768
+            ],
+            [
+              "qualify",
+              0.970162034034729
+            ],
+            [
+              "moneymaking",
+              0.969890832901001
+            ],
+            [
+              "patter",
+              0.9693726301193237
+            ],
+            [
+              "delegation",
+              0.9687619209289551
+            ],
+            [
+              "dibble",
+              0.9685099124908447
+            ],
+            [
+              "durham",
+              0.968264102935791
+            ],
+            [
+              "privy",
+              0.9675711393356323
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "patter",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9609259002062739,
+          "max_similarity": 0.9710365533828735,
+          "top_neighbors": [
+            [
+              "spile",
+              0.9710365533828735
+            ],
+            [
+              "bleak",
+              0.9708307981491089
+            ],
+            [
+              "dibble",
+              0.9706815481185913
+            ],
+            [
+              "allot",
+              0.9705793261528015
+            ],
+            [
+              "privy",
+              0.9704750776290894
+            ],
+            [
+              "moneymaking",
+              0.9703155755996704
+            ],
+            [
+              "maize",
+              0.9700687527656555
+            ],
+            [
+              "durham",
+              0.9699609279632568
+            ],
+            [
+              "behave",
+              0.9697389006614685
+            ],
+            [
+              "formalism",
+              0.9693726301193237
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "sink",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9490800244467599,
+          "max_similarity": 0.9785118103027344,
+          "top_neighbors": [
+            [
+              "ruby",
+              0.9785118103027344
+            ],
+            [
+              "blood",
+              0.9782674312591553
+            ],
+            [
+              "rick",
+              0.9766900539398193
+            ],
+            [
+              "variance",
+              0.9764528274536133
+            ],
+            [
+              "membrane",
+              0.9761324524879456
+            ],
+            [
+              "season",
+              0.9760046601295471
+            ],
+            [
+              "pane",
+              0.9759286046028137
+            ],
+            [
+              "rod",
+              0.9755424857139587
+            ],
+            [
+              "born",
+              0.9731088280677795
+            ],
+            [
+              "strange",
+              0.9667769074440002
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "bruneian",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.949673982299104,
+          "max_similarity": 0.9700061678886414,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9700061678886414
+            ],
+            [
+              "obadiah",
+              0.9687416553497314
+            ],
+            [
+              "freightage",
+              0.9679285883903503
+            ],
+            [
+              "wiseness",
+              0.9677273631095886
+            ],
+            [
+              "resiliency",
+              0.966954231262207
+            ],
+            [
+              "cunningly",
+              0.966552734375
+            ],
+            [
+              "papyrus",
+              0.9662721157073975
+            ],
+            [
+              "cornhusking",
+              0.9662055373191833
+            ],
+            [
+              "durham",
+              0.965596616268158
+            ],
+            [
+              "creeper",
+              0.964859127998352
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "freightage",
+              0.9745399355888367
+            ],
+            [
+              "cunningly",
+              0.9739802479743958
+            ],
+            [
+              "cornhusking",
+              0.9737386703491211
+            ],
+            [
+              "obadiah",
+              0.9732750058174133
+            ],
+            [
+              "resiliency",
+              0.9731529951095581
+            ],
+            [
+              "wiseness",
+              0.9728805422782898
+            ],
+            [
+              "cyprian",
+              0.9712833166122437
+            ],
+            [
+              "enlightened",
+              0.9707772135734558
+            ],
+            [
+              "oversimplification",
+              0.9683154821395874
+            ],
+            [
+              "restrictiveness",
+              0.9664608240127563
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9898761510848999
+            ],
+            [
+              "wiseness",
+              0.9890961647033691
+            ],
+            [
+              "obadiah",
+              0.9889836311340332
+            ],
+            [
+              "freightage",
+              0.9887619018554688
+            ],
+            [
+              "resiliency",
+              0.9886648654937744
+            ],
+            [
+              "cornhusking",
+              0.9881174564361572
+            ],
+            [
+              "cunningly",
+              0.9873262643814087
+            ],
+            [
+              "enlightened",
+              0.9866169691085815
+            ],
+            [
+              "papyrus",
+              0.9865222573280334
+            ],
+            [
+              "restrictiveness",
+              0.9861647486686707
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9885358810424805
+            ],
+            [
+              "freightage",
+              0.9876018166542053
+            ],
+            [
+              "obadiah",
+              0.9875208735466003
+            ],
+            [
+              "resiliency",
+              0.9869956970214844
+            ],
+            [
+              "wiseness",
+              0.9869755506515503
+            ],
+            [
+              "cornhusking",
+              0.9869663715362549
+            ],
+            [
+              "enlightened",
+              0.9847070574760437
+            ],
+            [
+              "papyrus",
+              0.9841560125350952
+            ],
+            [
+              "cunningly",
+              0.984110951423645
+            ],
+            [
+              "restrictiveness",
+              0.9834228754043579
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "freightage",
+              0.9561971426010132
+            ],
+            [
+              "cyprian",
+              0.9522141814231873
+            ],
+            [
+              "wiseness",
+              0.9489328265190125
+            ],
+            [
+              "papyrus",
+              0.9481898546218872
+            ],
+            [
+              "enlightened",
+              0.9410304427146912
+            ],
+            [
+              "resiliency",
+              0.9376866817474365
+            ],
+            [
+              "cornhusking",
+              0.9362097382545471
+            ],
+            [
+              "illegitimacy",
+              0.9284670948982239
+            ],
+            [
+              "restrictiveness",
+              0.9237956404685974
+            ],
+            [
+              "obadiah",
+              0.9221078753471375
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "bleak",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9607083335214731,
+          "max_similarity": 0.9745075106620789,
+          "top_neighbors": [
+            [
+              "dibble",
+              0.9745075106620789
+            ],
+            [
+              "allot",
+              0.973417341709137
+            ],
+            [
+              "spile",
+              0.9726267457008362
+            ],
+            [
+              "maize",
+              0.9724420309066772
+            ],
+            [
+              "privy",
+              0.9714552164077759
+            ],
+            [
+              "patter",
+              0.9708307981491089
+            ],
+            [
+              "behave",
+              0.9704611897468567
+            ],
+            [
+              "durham",
+              0.9701170921325684
+            ],
+            [
+              "moneymaking",
+              0.9692097902297974
+            ],
+            [
+              "pelvis",
+              0.9691535234451294
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "cyprian",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9512409142085484,
+          "max_similarity": 0.9750769138336182,
+          "top_neighbors": [
+            [
+              "privy",
+              0.9750769138336182
+            ],
+            [
+              "bruneian",
+              0.9700061678886414
+            ],
+            [
+              "papyrus",
+              0.9695337414741516
+            ],
+            [
+              "wiseness",
+              0.9685502648353577
+            ],
+            [
+              "obadiah",
+              0.9678854942321777
+            ],
+            [
+              "resiliency",
+              0.9652576446533203
+            ],
+            [
+              "freightage",
+              0.965065062046051
+            ],
+            [
+              "cunningly",
+              0.9650636315345764
+            ],
+            [
+              "durham",
+              0.9643362164497375
+            ],
+            [
+              "enlightened",
+              0.9630482792854309
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9712833166122437
+            ],
+            [
+              "cunningly",
+              0.9706536531448364
+            ],
+            [
+              "resiliency",
+              0.9700654745101929
+            ],
+            [
+              "papyrus",
+              0.9696605801582336
+            ],
+            [
+              "wiseness",
+              0.9691838622093201
+            ],
+            [
+              "obadiah",
+              0.9681829810142517
+            ],
+            [
+              "freightage",
+              0.9674692153930664
+            ],
+            [
+              "cornhusking",
+              0.9661480784416199
+            ],
+            [
+              "restrictiveness",
+              0.9655812382698059
+            ],
+            [
+              "enlightened",
+              0.965409517288208
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9898761510848999
+            ],
+            [
+              "obadiah",
+              0.9881107807159424
+            ],
+            [
+              "papyrus",
+              0.9880883693695068
+            ],
+            [
+              "resiliency",
+              0.9880828857421875
+            ],
+            [
+              "wiseness",
+              0.9879945516586304
+            ],
+            [
+              "restrictiveness",
+              0.986522912979126
+            ],
+            [
+              "freightage",
+              0.9865198731422424
+            ],
+            [
+              "cunningly",
+              0.9864065647125244
+            ],
+            [
+              "cornhusking",
+              0.9855179190635681
+            ],
+            [
+              "enlightened",
+              0.9853302240371704
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9885358810424805
+            ],
+            [
+              "obadiah",
+              0.9872894287109375
+            ],
+            [
+              "papyrus",
+              0.986851155757904
+            ],
+            [
+              "resiliency",
+              0.9867537617683411
+            ],
+            [
+              "wiseness",
+              0.9866194725036621
+            ],
+            [
+              "freightage",
+              0.9861020445823669
+            ],
+            [
+              "cornhusking",
+              0.984818160533905
+            ],
+            [
+              "restrictiveness",
+              0.9843897819519043
+            ],
+            [
+              "enlightened",
+              0.9837198257446289
+            ],
+            [
+              "cunningly",
+              0.9833881258964539
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "papyrus",
+              0.9549374580383301
+            ],
+            [
+              "bruneian",
+              0.9522141814231873
+            ],
+            [
+              "wiseness",
+              0.9366030097007751
+            ],
+            [
+              "enlightened",
+              0.9340407848358154
+            ],
+            [
+              "freightage",
+              0.9312857389450073
+            ],
+            [
+              "resiliency",
+              0.9291519522666931
+            ],
+            [
+              "cornhusking",
+              0.9278557896614075
+            ],
+            [
+              "illegitimacy",
+              0.9273526668548584
+            ],
+            [
+              "restrictiveness",
+              0.9235641956329346
+            ],
+            [
+              "obadiah",
+              0.9163461923599243
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "pointless",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9571831141199384,
+          "max_similarity": 0.9710668921470642,
+          "top_neighbors": [
+            [
+              "moneymaking",
+              0.9710668921470642
+            ],
+            [
+              "spile",
+              0.9684957265853882
+            ],
+            [
+              "qualify",
+              0.9679054617881775
+            ],
+            [
+              "flathead",
+              0.967171847820282
+            ],
+            [
+              "allot",
+              0.9669514298439026
+            ],
+            [
+              "patter",
+              0.9665472507476807
+            ],
+            [
+              "maize",
+              0.966330349445343
+            ],
+            [
+              "bleak",
+              0.9663282036781311
+            ],
+            [
+              "privy",
+              0.9660817384719849
+            ],
+            [
+              "wolfish",
+              0.9658089876174927
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "leeward",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9579145348801905,
+          "max_similarity": 0.9688563942909241,
+          "top_neighbors": [
+            [
+              "dibble",
+              0.9688563942909241
+            ],
+            [
+              "spile",
+              0.9675600528717041
+            ],
+            [
+              "durham",
+              0.9674181938171387
+            ],
+            [
+              "bleak",
+              0.9670141935348511
+            ],
+            [
+              "wolfish",
+              0.9670114517211914
+            ],
+            [
+              "calcification",
+              0.966530978679657
+            ],
+            [
+              "patter",
+              0.966497540473938
+            ],
+            [
+              "moneymaking",
+              0.9664912223815918
+            ],
+            [
+              "privy",
+              0.9652808904647827
+            ],
+            [
+              "qualify",
+              0.9651905298233032
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "maize",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9590035786434096,
+          "max_similarity": 0.9724420309066772,
+          "top_neighbors": [
+            [
+              "bleak",
+              0.9724420309066772
+            ],
+            [
+              "allot",
+              0.9711317420005798
+            ],
+            [
+              "spile",
+              0.9707789421081543
+            ],
+            [
+              "dibble",
+              0.9706339836120605
+            ],
+            [
+              "qualify",
+              0.9702824354171753
+            ],
+            [
+              "formalism",
+              0.9701626300811768
+            ],
+            [
+              "behave",
+              0.9701396822929382
+            ],
+            [
+              "patter",
+              0.9700687527656555
+            ],
+            [
+              "privy",
+              0.9688185453414917
+            ],
+            [
+              "wolfish",
+              0.9686121940612793
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "illegitimacy",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9252675686563764,
+          "max_similarity": 0.9635816216468811,
+          "top_neighbors": [
+            [
+              "cornhusking",
+              0.9635816216468811
+            ],
+            [
+              "oversimplification",
+              0.9618701934814453
+            ],
+            [
+              "resiliency",
+              0.9617852568626404
+            ],
+            [
+              "restrictiveness",
+              0.9604430198669434
+            ],
+            [
+              "freightage",
+              0.9587563872337341
+            ],
+            [
+              "creeper",
+              0.9571908116340637
+            ],
+            [
+              "bruneian",
+              0.9565163254737854
+            ],
+            [
+              "microscopically",
+              0.9553696513175964
+            ],
+            [
+              "obadiah",
+              0.9532560110092163
+            ],
+            [
+              "cunningly",
+              0.9519619941711426
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9670413732528687
+            ],
+            [
+              "freightage",
+              0.9648975729942322
+            ],
+            [
+              "cunningly",
+              0.9644195437431335
+            ],
+            [
+              "wiseness",
+              0.9629353880882263
+            ],
+            [
+              "obadiah",
+              0.9626827239990234
+            ],
+            [
+              "oversimplification",
+              0.9626429677009583
+            ],
+            [
+              "enlightened",
+              0.9624621272087097
+            ],
+            [
+              "bruneian",
+              0.9622147083282471
+            ],
+            [
+              "restrictiveness",
+              0.9607037901878357
+            ],
+            [
+              "cyprian",
+              0.960392951965332
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9862368702888489
+            ],
+            [
+              "freightage",
+              0.9843752384185791
+            ],
+            [
+              "wiseness",
+              0.9841896295547485
+            ],
+            [
+              "restrictiveness",
+              0.9840625524520874
+            ],
+            [
+              "cunningly",
+              0.9839056134223938
+            ],
+            [
+              "obadiah",
+              0.9838444590568542
+            ],
+            [
+              "enlightened",
+              0.9837895631790161
+            ],
+            [
+              "bruneian",
+              0.9836435914039612
+            ],
+            [
+              "cyprian",
+              0.9835920333862305
+            ],
+            [
+              "oversimplification",
+              0.9829491972923279
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9851576685905457
+            ],
+            [
+              "restrictiveness",
+              0.9832334518432617
+            ],
+            [
+              "obadiah",
+              0.9822626113891602
+            ],
+            [
+              "freightage",
+              0.9821790456771851
+            ],
+            [
+              "wiseness",
+              0.982080340385437
+            ],
+            [
+              "cyprian",
+              0.9813181161880493
+            ],
+            [
+              "enlightened",
+              0.981101930141449
+            ],
+            [
+              "cunningly",
+              0.9810231328010559
+            ],
+            [
+              "bruneian",
+              0.980536699295044
+            ],
+            [
+              "cornhusking",
+              0.9801522493362427
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9307202100753784
+            ],
+            [
+              "bruneian",
+              0.9284670948982239
+            ],
+            [
+              "restrictiveness",
+              0.927961528301239
+            ],
+            [
+              "cyprian",
+              0.9273526668548584
+            ],
+            [
+              "cornhusking",
+              0.9270756840705872
+            ],
+            [
+              "enlightened",
+              0.9246506690979004
+            ],
+            [
+              "papyrus",
+              0.922009289264679
+            ],
+            [
+              "oversimplification",
+              0.921471893787384
+            ],
+            [
+              "wiseness",
+              0.9077532887458801
+            ],
+            [
+              "freightage",
+              0.9057780504226685
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "variance",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9507183116309497,
+          "max_similarity": 0.9783725738525391,
+          "top_neighbors": [
+            [
+              "blood",
+              0.9783725738525391
+            ],
+            [
+              "membrane",
+              0.978289008140564
+            ],
+            [
+              "rick",
+              0.9779492616653442
+            ],
+            [
+              "ruby",
+              0.9777263402938843
+            ],
+            [
+              "season",
+              0.9768407940864563
+            ],
+            [
+              "rod",
+              0.9765853881835938
+            ],
+            [
+              "sink",
+              0.9764528274536133
+            ],
+            [
+              "pane",
+              0.9759089350700378
+            ],
+            [
+              "born",
+              0.9732474684715271
+            ],
+            [
+              "strange",
+              0.9687018990516663
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "enlightened",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9493918212092652,
+          "max_similarity": 0.9659039974212646,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9659039974212646
+            ],
+            [
+              "resiliency",
+              0.9650971293449402
+            ],
+            [
+              "bruneian",
+              0.964097797870636
+            ],
+            [
+              "cunningly",
+              0.9630537033081055
+            ],
+            [
+              "cyprian",
+              0.9630482792854309
+            ],
+            [
+              "freightage",
+              0.9624323844909668
+            ],
+            [
+              "durham",
+              0.9623001217842102
+            ],
+            [
+              "oversimplification",
+              0.9619156122207642
+            ],
+            [
+              "obadiah",
+              0.9619131684303284
+            ],
+            [
+              "wolfish",
+              0.9618103504180908
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9791136384010315
+            ],
+            [
+              "cunningly",
+              0.9762998819351196
+            ],
+            [
+              "resiliency",
+              0.9749727249145508
+            ],
+            [
+              "freightage",
+              0.9734029173851013
+            ],
+            [
+              "oversimplification",
+              0.9716931581497192
+            ],
+            [
+              "bruneian",
+              0.9707772135734558
+            ],
+            [
+              "restrictiveness",
+              0.9695566892623901
+            ],
+            [
+              "cornhusking",
+              0.9694561958312988
+            ],
+            [
+              "obadiah",
+              0.9688844680786133
+            ],
+            [
+              "cyprian",
+              0.965409517288208
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9912949800491333
+            ],
+            [
+              "resiliency",
+              0.9893394708633423
+            ],
+            [
+              "cunningly",
+              0.9889004826545715
+            ],
+            [
+              "freightage",
+              0.9873102903366089
+            ],
+            [
+              "restrictiveness",
+              0.9872828125953674
+            ],
+            [
+              "bruneian",
+              0.9866169691085815
+            ],
+            [
+              "obadiah",
+              0.9862459301948547
+            ],
+            [
+              "oversimplification",
+              0.9861557483673096
+            ],
+            [
+              "cyprian",
+              0.9853302240371704
+            ],
+            [
+              "cornhusking",
+              0.9849787354469299
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.990199089050293
+            ],
+            [
+              "resiliency",
+              0.9883400797843933
+            ],
+            [
+              "cunningly",
+              0.986542820930481
+            ],
+            [
+              "freightage",
+              0.9859038591384888
+            ],
+            [
+              "restrictiveness",
+              0.9856906533241272
+            ],
+            [
+              "obadiah",
+              0.9851135015487671
+            ],
+            [
+              "bruneian",
+              0.9847070574760437
+            ],
+            [
+              "cyprian",
+              0.9837198257446289
+            ],
+            [
+              "cornhusking",
+              0.9832026362419128
+            ],
+            [
+              "oversimplification",
+              0.9824514985084534
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.962565004825592
+            ],
+            [
+              "resiliency",
+              0.9487922787666321
+            ],
+            [
+              "bruneian",
+              0.9410304427146912
+            ],
+            [
+              "restrictiveness",
+              0.9395676851272583
+            ],
+            [
+              "papyrus",
+              0.9349054098129272
+            ],
+            [
+              "cyprian",
+              0.9340407848358154
+            ],
+            [
+              "freightage",
+              0.9325816035270691
+            ],
+            [
+              "obadiah",
+              0.9252851009368896
+            ],
+            [
+              "illegitimacy",
+              0.9246506690979004
+            ],
+            [
+              "cornhusking",
+              0.9244672656059265
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "membrane",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9560475227784138,
+          "max_similarity": 0.978289008140564,
+          "top_neighbors": [
+            [
+              "variance",
+              0.978289008140564
+            ],
+            [
+              "blood",
+              0.9764580726623535
+            ],
+            [
+              "sink",
+              0.9761324524879456
+            ],
+            [
+              "strange",
+              0.9759635925292969
+            ],
+            [
+              "ruby",
+              0.9746503829956055
+            ],
+            [
+              "rick",
+              0.973862886428833
+            ],
+            [
+              "pane",
+              0.9732183218002319
+            ],
+            [
+              "season",
+              0.9705257415771484
+            ],
+            [
+              "adopt",
+              0.9702649712562561
+            ],
+            [
+              "rod",
+              0.9698580503463745
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "strange",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9570351011899053,
+          "max_similarity": 0.9806039929389954,
+          "top_neighbors": [
+            [
+              "adopt",
+              0.9806039929389954
+            ],
+            [
+              "membrane",
+              0.9759635925292969
+            ],
+            [
+              "wolfish",
+              0.9701237082481384
+            ],
+            [
+              "moneymaking",
+              0.9693376421928406
+            ],
+            [
+              "variance",
+              0.9687018990516663
+            ],
+            [
+              "peacekeeping",
+              0.9677401185035706
+            ],
+            [
+              "sink",
+              0.9667769074440002
+            ],
+            [
+              "patter",
+              0.9664996266365051
+            ],
+            [
+              "behave",
+              0.9663800597190857
+            ],
+            [
+              "blood",
+              0.9659927487373352
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "calcification",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9610277511635605,
+          "max_similarity": 0.9763565063476562,
+          "top_neighbors": [
+            [
+              "qualify",
+              0.9763565063476562
+            ],
+            [
+              "moneymaking",
+              0.9720725417137146
+            ],
+            [
+              "wolfish",
+              0.9714062809944153
+            ],
+            [
+              "delegation",
+              0.9713701009750366
+            ],
+            [
+              "formalism",
+              0.9706291556358337
+            ],
+            [
+              "peacekeeping",
+              0.9693694710731506
+            ],
+            [
+              "durham",
+              0.9693385362625122
+            ],
+            [
+              "dibble",
+              0.9693083167076111
+            ],
+            [
+              "parenthesis",
+              0.9686481952667236
+            ],
+            [
+              "patter",
+              0.9680998921394348
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "pelvis",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9586720320643211,
+          "max_similarity": 0.9710594415664673,
+          "top_neighbors": [
+            [
+              "privy",
+              0.9710594415664673
+            ],
+            [
+              "bleak",
+              0.9691535234451294
+            ],
+            [
+              "dibble",
+              0.9690331220626831
+            ],
+            [
+              "patter",
+              0.9687561988830566
+            ],
+            [
+              "durham",
+              0.9682691097259521
+            ],
+            [
+              "qualify",
+              0.9679712653160095
+            ],
+            [
+              "allot",
+              0.967863142490387
+            ],
+            [
+              "delegation",
+              0.9676945209503174
+            ],
+            [
+              "spile",
+              0.9675876498222351
+            ],
+            [
+              "moneymaking",
+              0.9672116041183472
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "dibble",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9614570323301821,
+          "max_similarity": 0.9745075106620789,
+          "top_neighbors": [
+            [
+              "bleak",
+              0.9745075106620789
+            ],
+            [
+              "moneymaking",
+              0.9708659648895264
+            ],
+            [
+              "patter",
+              0.9706815481185913
+            ],
+            [
+              "maize",
+              0.9706339836120605
+            ],
+            [
+              "wolfish",
+              0.9705830812454224
+            ],
+            [
+              "qualify",
+              0.9704906940460205
+            ],
+            [
+              "spile",
+              0.9704681038856506
+            ],
+            [
+              "privy",
+              0.9700464010238647
+            ],
+            [
+              "behave",
+              0.9697856903076172
+            ],
+            [
+              "calcification",
+              0.9693083167076111
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "born",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9340241587891871,
+          "max_similarity": 0.9786670804023743,
+          "top_neighbors": [
+            [
+              "season",
+              0.9786670804023743
+            ],
+            [
+              "blood",
+              0.9781821370124817
+            ],
+            [
+              "rod",
+              0.9776155948638916
+            ],
+            [
+              "rick",
+              0.9775359034538269
+            ],
+            [
+              "ruby",
+              0.9766979217529297
+            ],
+            [
+              "pane",
+              0.9747435450553894
+            ],
+            [
+              "variance",
+              0.9732474684715271
+            ],
+            [
+              "sink",
+              0.9731088280677795
+            ],
+            [
+              "membrane",
+              0.9684622883796692
+            ],
+            [
+              "endure",
+              0.9536634087562561
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "parenthesis",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9569954409891245,
+          "max_similarity": 0.9686481952667236,
+          "top_neighbors": [
+            [
+              "calcification",
+              0.9686481952667236
+            ],
+            [
+              "qualify",
+              0.968349277973175
+            ],
+            [
+              "moneymaking",
+              0.9676461815834045
+            ],
+            [
+              "wolfish",
+              0.9658952355384827
+            ],
+            [
+              "delegation",
+              0.9657801985740662
+            ],
+            [
+              "privy",
+              0.9656320214271545
+            ],
+            [
+              "dibble",
+              0.9650283455848694
+            ],
+            [
+              "formalism",
+              0.9648609757423401
+            ],
+            [
+              "durham",
+              0.9644950032234192
+            ],
+            [
+              "patter",
+              0.963817834854126
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "qualify",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9604810914214776,
+          "max_similarity": 0.9763565063476562,
+          "top_neighbors": [
+            [
+              "calcification",
+              0.9763565063476562
+            ],
+            [
+              "wolfish",
+              0.970503568649292
+            ],
+            [
+              "dibble",
+              0.9704906940460205
+            ],
+            [
+              "maize",
+              0.9702824354171753
+            ],
+            [
+              "formalism",
+              0.970162034034729
+            ],
+            [
+              "moneymaking",
+              0.969890832901001
+            ],
+            [
+              "delegation",
+              0.9695256948471069
+            ],
+            [
+              "durham",
+              0.969369113445282
+            ],
+            [
+              "bleak",
+              0.9689609408378601
+            ],
+            [
+              "privy",
+              0.9686819314956665
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "season",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9370254703930446,
+          "max_similarity": 0.9790324568748474,
+          "top_neighbors": [
+            [
+              "rod",
+              0.9790324568748474
+            ],
+            [
+              "blood",
+              0.9789111614227295
+            ],
+            [
+              "born",
+              0.9786670804023743
+            ],
+            [
+              "rick",
+              0.9785348773002625
+            ],
+            [
+              "ruby",
+              0.9783867001533508
+            ],
+            [
+              "variance",
+              0.9768407940864563
+            ],
+            [
+              "sink",
+              0.9760046601295471
+            ],
+            [
+              "pane",
+              0.9756709337234497
+            ],
+            [
+              "membrane",
+              0.9705257415771484
+            ],
+            [
+              "endure",
+              0.9559690356254578
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "freightage",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9461478603129484,
+          "max_similarity": 0.9679285883903503,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9679285883903503
+            ],
+            [
+              "wiseness",
+              0.9667313694953918
+            ],
+            [
+              "resiliency",
+              0.966689944267273
+            ],
+            [
+              "cornhusking",
+              0.9657615423202515
+            ],
+            [
+              "obadiah",
+              0.9655132293701172
+            ],
+            [
+              "cyprian",
+              0.965065062046051
+            ],
+            [
+              "oversimplification",
+              0.9649059176445007
+            ],
+            [
+              "restrictiveness",
+              0.9635937809944153
+            ],
+            [
+              "papyrus",
+              0.962675929069519
+            ],
+            [
+              "enlightened",
+              0.9624323844909668
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9745399355888367
+            ],
+            [
+              "resiliency",
+              0.9739009737968445
+            ],
+            [
+              "enlightened",
+              0.9734029173851013
+            ],
+            [
+              "wiseness",
+              0.9730855226516724
+            ],
+            [
+              "cunningly",
+              0.9727597236633301
+            ],
+            [
+              "cornhusking",
+              0.9716382622718811
+            ],
+            [
+              "obadiah",
+              0.9710628390312195
+            ],
+            [
+              "restrictiveness",
+              0.970140278339386
+            ],
+            [
+              "oversimplification",
+              0.9689731001853943
+            ],
+            [
+              "papyrus",
+              0.9676692485809326
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9899222254753113
+            ],
+            [
+              "wiseness",
+              0.9893204569816589
+            ],
+            [
+              "bruneian",
+              0.9887619018554688
+            ],
+            [
+              "restrictiveness",
+              0.9882131218910217
+            ],
+            [
+              "obadiah",
+              0.9882075786590576
+            ],
+            [
+              "enlightened",
+              0.9873102903366089
+            ],
+            [
+              "cornhusking",
+              0.987191915512085
+            ],
+            [
+              "cunningly",
+              0.9870091080665588
+            ],
+            [
+              "papyrus",
+              0.9869534373283386
+            ],
+            [
+              "cyprian",
+              0.9865198731422424
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.988562285900116
+            ],
+            [
+              "wiseness",
+              0.988213300704956
+            ],
+            [
+              "bruneian",
+              0.9876018166542053
+            ],
+            [
+              "obadiah",
+              0.9866825938224792
+            ],
+            [
+              "restrictiveness",
+              0.9865784049034119
+            ],
+            [
+              "cyprian",
+              0.9861020445823669
+            ],
+            [
+              "cornhusking",
+              0.9860334396362305
+            ],
+            [
+              "enlightened",
+              0.9859038591384888
+            ],
+            [
+              "papyrus",
+              0.9849031567573547
+            ],
+            [
+              "cunningly",
+              0.9840620756149292
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9561971426010132
+            ],
+            [
+              "wiseness",
+              0.9330852627754211
+            ],
+            [
+              "enlightened",
+              0.9325816035270691
+            ],
+            [
+              "resiliency",
+              0.9315649271011353
+            ],
+            [
+              "cyprian",
+              0.9312857389450073
+            ],
+            [
+              "papyrus",
+              0.925645649433136
+            ],
+            [
+              "cornhusking",
+              0.9153690338134766
+            ],
+            [
+              "restrictiveness",
+              0.9115343689918518
+            ],
+            [
+              "illegitimacy",
+              0.9057780504226685
+            ],
+            [
+              "obadiah",
+              0.8909708261489868
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "endure",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9551631966415717,
+          "max_similarity": 0.9687688946723938,
+          "top_neighbors": [
+            [
+              "allot",
+              0.9687688946723938
+            ],
+            [
+              "maize",
+              0.9684556722640991
+            ],
+            [
+              "bleak",
+              0.9682213068008423
+            ],
+            [
+              "behave",
+              0.9680665731430054
+            ],
+            [
+              "spile",
+              0.9679757952690125
+            ],
+            [
+              "dibble",
+              0.9659973382949829
+            ],
+            [
+              "patter",
+              0.9657960534095764
+            ],
+            [
+              "moneymaking",
+              0.9652820825576782
+            ],
+            [
+              "pointless",
+              0.9645727276802063
+            ],
+            [
+              "qualify",
+              0.9644912481307983
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "resiliency",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.94557693053265,
+          "max_similarity": 0.9694918394088745,
+          "top_neighbors": [
+            [
+              "restrictiveness",
+              0.9694918394088745
+            ],
+            [
+              "oversimplification",
+              0.9685712456703186
+            ],
+            [
+              "bruneian",
+              0.966954231262207
+            ],
+            [
+              "freightage",
+              0.966689944267273
+            ],
+            [
+              "cornhusking",
+              0.9661178588867188
+            ],
+            [
+              "cyprian",
+              0.9652576446533203
+            ],
+            [
+              "obadiah",
+              0.9652067422866821
+            ],
+            [
+              "enlightened",
+              0.9650971293449402
+            ],
+            [
+              "cunningly",
+              0.9641079306602478
+            ],
+            [
+              "wiseness",
+              0.9639456868171692
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.977226734161377
+            ],
+            [
+              "restrictiveness",
+              0.9768807888031006
+            ],
+            [
+              "cunningly",
+              0.9749812483787537
+            ],
+            [
+              "enlightened",
+              0.9749727249145508
+            ],
+            [
+              "freightage",
+              0.9739009737968445
+            ],
+            [
+              "bruneian",
+              0.9731529951095581
+            ],
+            [
+              "oversimplification",
+              0.9727329015731812
+            ],
+            [
+              "obadiah",
+              0.9718711972236633
+            ],
+            [
+              "cyprian",
+              0.9700654745101929
+            ],
+            [
+              "cornhusking",
+              0.96991366147995
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9912039041519165
+            ],
+            [
+              "restrictiveness",
+              0.9910474419593811
+            ],
+            [
+              "freightage",
+              0.9899222254753113
+            ],
+            [
+              "enlightened",
+              0.9893394708633423
+            ],
+            [
+              "obadiah",
+              0.9890548586845398
+            ],
+            [
+              "bruneian",
+              0.9886648654937744
+            ],
+            [
+              "cunningly",
+              0.9885700345039368
+            ],
+            [
+              "oversimplification",
+              0.9880829453468323
+            ],
+            [
+              "cyprian",
+              0.9880828857421875
+            ],
+            [
+              "papyrus",
+              0.9867904186248779
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "restrictiveness",
+              0.9904630184173584
+            ],
+            [
+              "wiseness",
+              0.9903059005737305
+            ],
+            [
+              "freightage",
+              0.988562285900116
+            ],
+            [
+              "enlightened",
+              0.9883400797843933
+            ],
+            [
+              "obadiah",
+              0.9872864484786987
+            ],
+            [
+              "bruneian",
+              0.9869956970214844
+            ],
+            [
+              "cyprian",
+              0.9867537617683411
+            ],
+            [
+              "cunningly",
+              0.9863413572311401
+            ],
+            [
+              "cornhusking",
+              0.9855435490608215
+            ],
+            [
+              "illegitimacy",
+              0.9851576685905457
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "restrictiveness",
+              0.953415036201477
+            ],
+            [
+              "enlightened",
+              0.9487922787666321
+            ],
+            [
+              "wiseness",
+              0.9419630169868469
+            ],
+            [
+              "bruneian",
+              0.9376866817474365
+            ],
+            [
+              "freightage",
+              0.9315649271011353
+            ],
+            [
+              "illegitimacy",
+              0.9307202100753784
+            ],
+            [
+              "cyprian",
+              0.9291519522666931
+            ],
+            [
+              "oversimplification",
+              0.9242319464683533
+            ],
+            [
+              "papyrus",
+              0.9233864545822144
+            ],
+            [
+              "cornhusking",
+              0.9177334308624268
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "rick",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9442587932761835,
+          "max_similarity": 0.9807901978492737,
+          "top_neighbors": [
+            [
+              "blood",
+              0.9807901978492737
+            ],
+            [
+              "rod",
+              0.9798423647880554
+            ],
+            [
+              "season",
+              0.9785348773002625
+            ],
+            [
+              "variance",
+              0.9779492616653442
+            ],
+            [
+              "born",
+              0.9775359034538269
+            ],
+            [
+              "ruby",
+              0.9772663712501526
+            ],
+            [
+              "sink",
+              0.9766900539398193
+            ],
+            [
+              "pane",
+              0.9758023619651794
+            ],
+            [
+              "membrane",
+              0.973862886428833
+            ],
+            [
+              "strange",
+              0.9624065160751343
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "ruby",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9465301316611621,
+          "max_similarity": 0.9805242419242859,
+          "top_neighbors": [
+            [
+              "blood",
+              0.9805242419242859
+            ],
+            [
+              "sink",
+              0.9785118103027344
+            ],
+            [
+              "season",
+              0.9783867001533508
+            ],
+            [
+              "variance",
+              0.9777263402938843
+            ],
+            [
+              "pane",
+              0.9777083396911621
+            ],
+            [
+              "rod",
+              0.9776391386985779
+            ],
+            [
+              "rick",
+              0.9772663712501526
+            ],
+            [
+              "born",
+              0.9766979217529297
+            ],
+            [
+              "membrane",
+              0.9746503829956055
+            ],
+            [
+              "strange",
+              0.9645684361457825
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "papyrus",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9493701822903692,
+          "max_similarity": 0.9695337414741516,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9695337414741516
+            ],
+            [
+              "bruneian",
+              0.9662721157073975
+            ],
+            [
+              "durham",
+              0.9651105403900146
+            ],
+            [
+              "obadiah",
+              0.9649357199668884
+            ],
+            [
+              "wiseness",
+              0.9645569920539856
+            ],
+            [
+              "freightage",
+              0.962675929069519
+            ],
+            [
+              "resiliency",
+              0.9618954062461853
+            ],
+            [
+              "privy",
+              0.9609246253967285
+            ],
+            [
+              "patter",
+              0.9602423310279846
+            ],
+            [
+              "cornhusking",
+              0.9598805904388428
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9696605801582336
+            ],
+            [
+              "obadiah",
+              0.9688515067100525
+            ],
+            [
+              "freightage",
+              0.9676692485809326
+            ],
+            [
+              "wiseness",
+              0.9668270945549011
+            ],
+            [
+              "cornhusking",
+              0.9666647911071777
+            ],
+            [
+              "resiliency",
+              0.9666546583175659
+            ],
+            [
+              "cunningly",
+              0.9664850234985352
+            ],
+            [
+              "bruneian",
+              0.9656487107276917
+            ],
+            [
+              "enlightened",
+              0.9636783003807068
+            ],
+            [
+              "oversimplification",
+              0.9629603624343872
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9880883693695068
+            ],
+            [
+              "obadiah",
+              0.987768828868866
+            ],
+            [
+              "freightage",
+              0.9869534373283386
+            ],
+            [
+              "wiseness",
+              0.9868602156639099
+            ],
+            [
+              "resiliency",
+              0.9867904186248779
+            ],
+            [
+              "bruneian",
+              0.9865222573280334
+            ],
+            [
+              "cornhusking",
+              0.9865037202835083
+            ],
+            [
+              "cunningly",
+              0.9848728775978088
+            ],
+            [
+              "enlightened",
+              0.9846482872962952
+            ],
+            [
+              "restrictiveness",
+              0.9842361211776733
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.986851155757904
+            ],
+            [
+              "obadiah",
+              0.9855660200119019
+            ],
+            [
+              "freightage",
+              0.9849031567573547
+            ],
+            [
+              "cornhusking",
+              0.9848557114601135
+            ],
+            [
+              "wiseness",
+              0.984616756439209
+            ],
+            [
+              "resiliency",
+              0.9842703342437744
+            ],
+            [
+              "bruneian",
+              0.9841560125350952
+            ],
+            [
+              "enlightened",
+              0.9820454716682434
+            ],
+            [
+              "cunningly",
+              0.981280505657196
+            ],
+            [
+              "restrictiveness",
+              0.9811710715293884
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "cyprian",
+              0.9549374580383301
+            ],
+            [
+              "bruneian",
+              0.9481898546218872
+            ],
+            [
+              "wiseness",
+              0.9434880018234253
+            ],
+            [
+              "obadiah",
+              0.9375917911529541
+            ],
+            [
+              "enlightened",
+              0.9349054098129272
+            ],
+            [
+              "restrictiveness",
+              0.9327149987220764
+            ],
+            [
+              "cornhusking",
+              0.9312250018119812
+            ],
+            [
+              "freightage",
+              0.925645649433136
+            ],
+            [
+              "resiliency",
+              0.9233864545822144
+            ],
+            [
+              "illegitimacy",
+              0.922009289264679
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "adopt",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9519853445948386,
+          "max_similarity": 0.9806039929389954,
+          "top_neighbors": [
+            [
+              "strange",
+              0.9806039929389954
+            ],
+            [
+              "membrane",
+              0.9702649712562561
+            ],
+            [
+              "moneymaking",
+              0.9640800356864929
+            ],
+            [
+              "sink",
+              0.964026153087616
+            ],
+            [
+              "behave",
+              0.9635582566261292
+            ],
+            [
+              "variance",
+              0.9630756974220276
+            ],
+            [
+              "patter",
+              0.9618006348609924
+            ],
+            [
+              "wolfish",
+              0.9614587426185608
+            ],
+            [
+              "peacekeeping",
+              0.9613115787506104
+            ],
+            [
+              "blood",
+              0.960807740688324
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "cornhusking",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9428317644158188,
+          "max_similarity": 0.9676958918571472,
+          "top_neighbors": [
+            [
+              "oversimplification",
+              0.9676958918571472
+            ],
+            [
+              "creeper",
+              0.9667595624923706
+            ],
+            [
+              "bruneian",
+              0.9662055373191833
+            ],
+            [
+              "resiliency",
+              0.9661178588867188
+            ],
+            [
+              "freightage",
+              0.9657615423202515
+            ],
+            [
+              "wiseness",
+              0.9642246961593628
+            ],
+            [
+              "illegitimacy",
+              0.9635816216468811
+            ],
+            [
+              "obadiah",
+              0.9633641839027405
+            ],
+            [
+              "cunningly",
+              0.9630670547485352
+            ],
+            [
+              "restrictiveness",
+              0.9627878665924072
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9738552570343018
+            ],
+            [
+              "bruneian",
+              0.9737386703491211
+            ],
+            [
+              "cunningly",
+              0.973109781742096
+            ],
+            [
+              "freightage",
+              0.9716382622718811
+            ],
+            [
+              "obadiah",
+              0.9707439541816711
+            ],
+            [
+              "resiliency",
+              0.96991366147995
+            ],
+            [
+              "enlightened",
+              0.9694561958312988
+            ],
+            [
+              "oversimplification",
+              0.9680813550949097
+            ],
+            [
+              "papyrus",
+              0.9666647911071777
+            ],
+            [
+              "cyprian",
+              0.9661480784416199
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.9884521961212158
+            ],
+            [
+              "bruneian",
+              0.9881174564361572
+            ],
+            [
+              "freightage",
+              0.987191915512085
+            ],
+            [
+              "obadiah",
+              0.9868208169937134
+            ],
+            [
+              "resiliency",
+              0.9867763519287109
+            ],
+            [
+              "cunningly",
+              0.9865921139717102
+            ],
+            [
+              "papyrus",
+              0.9865037202835083
+            ],
+            [
+              "cyprian",
+              0.9855179190635681
+            ],
+            [
+              "restrictiveness",
+              0.9854394793510437
+            ],
+            [
+              "enlightened",
+              0.9849787354469299
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "wiseness",
+              0.987277626991272
+            ],
+            [
+              "bruneian",
+              0.9869663715362549
+            ],
+            [
+              "freightage",
+              0.9860334396362305
+            ],
+            [
+              "resiliency",
+              0.9855435490608215
+            ],
+            [
+              "obadiah",
+              0.9853234887123108
+            ],
+            [
+              "papyrus",
+              0.9848557114601135
+            ],
+            [
+              "cyprian",
+              0.984818160533905
+            ],
+            [
+              "cunningly",
+              0.9841213226318359
+            ],
+            [
+              "restrictiveness",
+              0.9839033484458923
+            ],
+            [
+              "enlightened",
+              0.9832026362419128
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "bruneian",
+              0.9362097382545471
+            ],
+            [
+              "papyrus",
+              0.9312250018119812
+            ],
+            [
+              "wiseness",
+              0.9292870163917542
+            ],
+            [
+              "oversimplification",
+              0.9283061623573303
+            ],
+            [
+              "cyprian",
+              0.9278557896614075
+            ],
+            [
+              "illegitimacy",
+              0.9270756840705872
+            ],
+            [
+              "enlightened",
+              0.9244672656059265
+            ],
+            [
+              "restrictiveness",
+              0.9223843812942505
+            ],
+            [
+              "resiliency",
+              0.9177334308624268
+            ],
+            [
+              "freightage",
+              0.9153690338134766
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "pane",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9458863467586284,
+          "max_similarity": 0.9777083396911621,
+          "top_neighbors": [
+            [
+              "ruby",
+              0.9777083396911621
+            ],
+            [
+              "blood",
+              0.9760679006576538
+            ],
+            [
+              "sink",
+              0.9759286046028137
+            ],
+            [
+              "variance",
+              0.9759089350700378
+            ],
+            [
+              "rod",
+              0.9758739471435547
+            ],
+            [
+              "rick",
+              0.9758023619651794
+            ],
+            [
+              "season",
+              0.9756709337234497
+            ],
+            [
+              "born",
+              0.9747435450553894
+            ],
+            [
+              "membrane",
+              0.9732183218002319
+            ],
+            [
+              "maize",
+              0.9613441824913025
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "peacekeeping",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9588791813169207,
+          "max_similarity": 0.9752171039581299,
+          "top_neighbors": [
+            [
+              "moneymaking",
+              0.9752171039581299
+            ],
+            [
+              "wolfish",
+              0.9699580669403076
+            ],
+            [
+              "calcification",
+              0.9693694710731506
+            ],
+            [
+              "durham",
+              0.9689611792564392
+            ],
+            [
+              "strange",
+              0.9677401185035706
+            ],
+            [
+              "formalism",
+              0.9675053358078003
+            ],
+            [
+              "dibble",
+              0.9660800099372864
+            ],
+            [
+              "qualify",
+              0.9659978747367859
+            ],
+            [
+              "delegation",
+              0.9656453728675842
+            ],
+            [
+              "patter",
+              0.9652580618858337
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "wolfish",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9613032450481337,
+          "max_similarity": 0.9714062809944153,
+          "top_neighbors": [
+            [
+              "calcification",
+              0.9714062809944153
+            ],
+            [
+              "dibble",
+              0.9705830812454224
+            ],
+            [
+              "moneymaking",
+              0.9705345034599304
+            ],
+            [
+              "qualify",
+              0.970503568649292
+            ],
+            [
+              "formalism",
+              0.970486044883728
+            ],
+            [
+              "durham",
+              0.9704648852348328
+            ],
+            [
+              "strange",
+              0.9701237082481384
+            ],
+            [
+              "peacekeeping",
+              0.9699580669403076
+            ],
+            [
+              "patter",
+              0.969338059425354
+            ],
+            [
+              "bleak",
+              0.968888521194458
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "rod",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9393136695939668,
+          "max_similarity": 0.9798423647880554,
+          "top_neighbors": [
+            [
+              "rick",
+              0.9798423647880554
+            ],
+            [
+              "season",
+              0.9790324568748474
+            ],
+            [
+              "blood",
+              0.9780720472335815
+            ],
+            [
+              "ruby",
+              0.9776391386985779
+            ],
+            [
+              "born",
+              0.9776155948638916
+            ],
+            [
+              "variance",
+              0.9765853881835938
+            ],
+            [
+              "pane",
+              0.9758739471435547
+            ],
+            [
+              "sink",
+              0.9755424857139587
+            ],
+            [
+              "membrane",
+              0.9698580503463745
+            ],
+            [
+              "endure",
+              0.9579616189002991
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "delegation",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9593455256248007,
+          "max_similarity": 0.9713701009750366,
+          "top_neighbors": [
+            [
+              "calcification",
+              0.9713701009750366
+            ],
+            [
+              "durham",
+              0.9696826934814453
+            ],
+            [
+              "qualify",
+              0.9695256948471069
+            ],
+            [
+              "formalism",
+              0.9687619209289551
+            ],
+            [
+              "moneymaking",
+              0.9684973359107971
+            ],
+            [
+              "dibble",
+              0.9683230519294739
+            ],
+            [
+              "pelvis",
+              0.9676945209503174
+            ],
+            [
+              "privy",
+              0.9675411581993103
+            ],
+            [
+              "spile",
+              0.9673840999603271
+            ],
+            [
+              "patter",
+              0.9673458933830261
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_9": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_13": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        },
+        "layer_18": {
+          "connectivity_count": 0,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": []
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 0,
+        "mean_connectivity": 9.8,
+        "variance": 384.16,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0025963236057742235
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "word": "oversimplification",
+      "layer_results": {
+        "layer_0": {
+          "connectivity_count": 49,
+          "mean_similarity": 0.9444838543327487,
+          "max_similarity": 0.9685712456703186,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9685712456703186
+            ],
+            [
+              "cornhusking",
+              0.9676958918571472
+            ],
+            [
+              "restrictiveness",
+              0.9665956497192383
+            ],
+            [
+              "freightage",
+              0.9649059176445007
+            ],
+            [
+              "creeper",
+              0.9645177125930786
+            ],
+            [
+              "obadiah",
+              0.963998556137085
+            ],
+            [
+              "bruneian",
+              0.9639932513237
+            ],
+            [
+              "microscopically",
+              0.9630960822105408
+            ],
+            [
+              "cunningly",
+              0.962150514125824
+            ],
+            [
+              "enlightened",
+              0.9619156122207642
+            ]
+          ]
+        },
+        "layer_4": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "cunningly",
+              0.9730162620544434
+            ],
+            [
+              "resiliency",
+              0.9727329015731812
+            ],
+            [
+              "enlightened",
+              0.9716931581497192
+            ],
+            [
+              "wiseness",
+              0.9715660810470581
+            ],
+            [
+              "obadiah",
+              0.970317542552948
+            ],
+            [
+              "restrictiveness",
+              0.969500720500946
+            ],
+            [
+              "freightage",
+              0.9689731001853943
+            ],
+            [
+              "bruneian",
+              0.9683154821395874
+            ],
+            [
+              "cornhusking",
+              0.9680813550949097
+            ],
+            [
+              "cyprian",
+              0.9635452032089233
+            ]
+          ]
+        },
+        "layer_9": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9880829453468323
+            ],
+            [
+              "restrictiveness",
+              0.9875131845474243
+            ],
+            [
+              "wiseness",
+              0.9871461391448975
+            ],
+            [
+              "cunningly",
+              0.9866861701011658
+            ],
+            [
+              "enlightened",
+              0.9861557483673096
+            ],
+            [
+              "obadiah",
+              0.9859798550605774
+            ],
+            [
+              "freightage",
+              0.9857244491577148
+            ],
+            [
+              "bruneian",
+              0.9851486682891846
+            ],
+            [
+              "cornhusking",
+              0.9847018718719482
+            ],
+            [
+              "cyprian",
+              0.9838330149650574
+            ]
+          ]
+        },
+        "layer_13": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "resiliency",
+              0.9847896099090576
+            ],
+            [
+              "restrictiveness",
+              0.9844595789909363
+            ],
+            [
+              "wiseness",
+              0.9836803078651428
+            ],
+            [
+              "cunningly",
+              0.9827234148979187
+            ],
+            [
+              "enlightened",
+              0.9824514985084534
+            ],
+            [
+              "freightage",
+              0.9818953275680542
+            ],
+            [
+              "obadiah",
+              0.9815508127212524
+            ],
+            [
+              "bruneian",
+              0.9808601140975952
+            ],
+            [
+              "cornhusking",
+              0.9805653095245361
+            ],
+            [
+              "cyprian",
+              0.9801989197731018
+            ]
+          ]
+        },
+        "layer_18": {
+          "connectivity_count": 12,
+          "mean_similarity": NaN,
+          "max_similarity": NaN,
+          "top_neighbors": [
+            [
+              "restrictiveness",
+              0.9330936670303345
+            ],
+            [
+              "cunningly",
+              0.9296270608901978
+            ],
+            [
+              "cornhusking",
+              0.9283061623573303
+            ],
+            [
+              "resiliency",
+              0.9242319464683533
+            ],
+            [
+              "enlightened",
+              0.9220736026763916
+            ],
+            [
+              "illegitimacy",
+              0.921471893787384
+            ],
+            [
+              "wiseness",
+              0.9203892946243286
+            ],
+            [
+              "papyrus",
+              0.9005791544914246
+            ],
+            [
+              "bruneian",
+              0.8957257270812988
+            ],
+            [
+              "cyprian",
+              0.8923080563545227
+            ]
+          ]
+        }
+      },
+      "evolution": {
+        "trajectory": [
+          49,
+          12,
+          12,
+          12,
+          12
+        ],
+        "max_connectivity": 49,
+        "min_connectivity": 12,
+        "mean_connectivity": 19.4,
+        "variance": 219.04000000000002,
+        "peak_layer": 0,
+        "trough_layer": 4,
+        "stability": 0.0045446282494091975
+      },
+      "layers_analyzed": [
+        0,
+        4,
+        9,
+        13,
+        18
+      ]
+    }
+  ]
+}
