@@ -60,7 +60,7 @@ cat > "$JOB_SCRIPT" << EOF
 echo "Starting precomputation at \$(date)"
 echo "================================"
 
-python precompute_dictionary_embeddings_hf.py \\
+python semantic_connectivity_pipeline/precompute_dictionary_embeddings_hf.py \\
     --model "$MODEL_PATH" \\
     --output-dir "$OUTPUT_DIR" \\
     --device "$DEVICE" \\
@@ -83,7 +83,7 @@ echo "Output directory: $OUTPUT_DIR" >> "$LOG_DIR/summary.txt"
 echo "HuggingFace repo: https://huggingface.co/datasets/$HF_REPO_ID" >> "$LOG_DIR/summary.txt"
 
 # Verify results
-python precompute_dictionary_embeddings_hf.py \\
+python semantic_connectivity_pipeline/precompute_dictionary_embeddings_hf.py \\
     --output-dir "$OUTPUT_DIR" \\
     --verify-only \\
     >> "$LOG_DIR/summary.txt" 2>&1
