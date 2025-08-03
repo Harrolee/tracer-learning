@@ -102,7 +102,8 @@ echo "HuggingFace repo: https://huggingface.co/datasets/$HF_REPO_ID"
 echo ""
 
 # Start job in tmux
-tmux new-session -d -s "$TMUX_SESSION" "bash $JOB_SCRIPT"
+tmux new-session -d -s "$TMUX_SESSION"
+tmux send-keys -t "$TMUX_SESSION" "bash $JOB_SCRIPT" Enter
 
 echo -e "${GREEN}Job started successfully!${NC}"
 echo ""
