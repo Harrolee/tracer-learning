@@ -53,17 +53,38 @@ class UnifiedAnalysisPipeline:
         # Circuit tracer setup (required)
         try:
             # Determine model and transcoder set
-            if 'gemma-2b' in model_path.lower() or 'gemma-2-2b' in model_path.lower():
-                # Use TransformerLens model name and transcoder set for Gemma
+            # Check path first
+            if 'gemma' in model_path.lower():
                 tl_model_name = 'google/gemma-2-2b'
                 transcoder_set = 'gemma'
-                print(f"   Detected Gemma model, using transcoder set: {transcoder_set}")
+                print(f"   Detected Gemma model from path, using transcoder set: {transcoder_set}")
             elif 'llama' in model_path.lower():
                 tl_model_name = 'meta-llama/Llama-3.2-1B'
                 transcoder_set = 'llama'
-                print(f"   Detected Llama model, using transcoder set: {transcoder_set}")
+                print(f"   Detected Llama model from path, using transcoder set: {transcoder_set}")
             else:
-                raise ValueError(f"Unsupported model: {model_path}. Circuit tracer supports Gemma and Llama models.")
+                # Check model config to determine type
+                import json
+                from pathlib import Path
+                config_path = Path(model_path) / 'config.json'
+                if config_path.exists():
+                    with open(config_path) as f:
+                        config = json.load(f)
+                    model_type = config.get('model_type', '').lower()
+                    model_name = config.get('_name_or_path', '').lower()
+                    
+                    if 'gemma' in model_type or 'gemma' in model_name:
+                        tl_model_name = 'google/gemma-2-2b'
+                        transcoder_set = 'gemma'
+                        print(f"   Detected Gemma model from config, using transcoder set: {transcoder_set}")
+                    elif 'llama' in model_type or 'llama' in model_name:
+                        tl_model_name = 'meta-llama/Llama-3.2-1B'
+                        transcoder_set = 'llama'
+                        print(f"   Detected Llama model from config, using transcoder set: {transcoder_set}")
+                    else:
+                        raise ValueError(f"Could not determine model type from config. model_type={model_type}, path={model_path}")
+                else:
+                    raise ValueError(f"No config.json found at {config_path}. Cannot determine model type.")
             
             # Create ReplacementModel using the proper method
             self.tracer_model = ReplacementModel.from_pretrained(
