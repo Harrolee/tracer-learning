@@ -48,15 +48,16 @@ class UnifiedAnalysisPipeline:
         # Load dictionary embeddings metadata
         self.load_dictionary_metadata()
         
-        # Circuit tracer setup
+        # Circuit tracer setup (required)
         try:
             self.tracer_model = ReplacementModel(self.model, self.tokenizer)
             self.circuit_tracer_available = True
+            print("✅ Circuit tracer initialized successfully")
         except Exception as e:
-            print(f"⚠️  Circuit tracer not available for this model: {e}")
-            print("   Continuing without feature extraction...")
-            self.tracer_model = None
-            self.circuit_tracer_available = False
+            print(f"❌ FATAL: Circuit tracer initialization failed: {e}")
+            print("   Circuit tracer is required for this analysis.")
+            print("   Please ensure circuit-tracer is properly installed.")
+            raise RuntimeError(f"Circuit tracer initialization failed: {e}")
         
     def load_dictionary_metadata(self):
         """Load metadata about precomputed dictionary embeddings."""
@@ -235,11 +236,10 @@ class UnifiedAnalysisPipeline:
         words: List[str],
         threshold: float = 0.1
     ) -> Dict[str, Dict]:
-        """Extract feature activations using circuit tracer."""
+        """Extract feature activations using circuit tracer (required)."""
         
         if not self.circuit_tracer_available:
-            print(f"\n⚠️  Skipping circuit feature extraction (circuit tracer not available)")
-            return {word: {} for word in words}
+            raise RuntimeError("Circuit tracer is not available but is required for analysis")
         
         print(f"\n🧠 Extracting circuit features for {len(words)} words")
         features_by_word = {}
