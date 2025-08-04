@@ -39,18 +39,39 @@ class UnifiedAnalysisPipeline:
         self.dict_embeddings_dir = dictionary_embeddings_dir
         self.device = device
         
-        # Load model and tokenizer
+        # Load model and tokenizer for embeddings
         print(f"🤖 Loading model: {model_path}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.model = AutoModel.from_pretrained(model_path).to(device)
         self.model.eval()
+        
+        # Note: Circuit tracer will load its own TransformerLens version of the model
         
         # Load dictionary embeddings metadata
         self.load_dictionary_metadata()
         
         # Circuit tracer setup (required)
         try:
-            self.tracer_model = ReplacementModel(self.model, self.tokenizer)
+            # Determine model and transcoder set
+            if 'gemma-2b' in model_path.lower() or 'gemma-2-2b' in model_path.lower():
+                # Use TransformerLens model name and transcoder set for Gemma
+                tl_model_name = 'google/gemma-2-2b'
+                transcoder_set = 'gemma'
+                print(f"   Detected Gemma model, using transcoder set: {transcoder_set}")
+            elif 'llama' in model_path.lower():
+                tl_model_name = 'meta-llama/Llama-3.2-1B'
+                transcoder_set = 'llama'
+                print(f"   Detected Llama model, using transcoder set: {transcoder_set}")
+            else:
+                raise ValueError(f"Unsupported model: {model_path}. Circuit tracer supports Gemma and Llama models.")
+            
+            # Create ReplacementModel using the proper method
+            self.tracer_model = ReplacementModel.from_pretrained(
+                model_name=tl_model_name,
+                transcoder_set=transcoder_set,
+                device=self.device,
+                dtype=torch.float32 if self.device == 'cpu' else torch.bfloat16
+            )
             self.circuit_tracer_available = True
             print("✅ Circuit tracer initialized successfully")
         except Exception as e:
