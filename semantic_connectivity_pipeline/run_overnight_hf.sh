@@ -1,5 +1,7 @@
 #!/bin/bash
 # Script to run dictionary embedding precomputation overnight with HF upload
+# Computes embeddings for ALL layers (0-26 for Gemma-2B)
+# Warning: This will generate ~9GB of data for 77k words across 27 layers
 
 set -e
 
@@ -60,11 +62,14 @@ cat > "$JOB_SCRIPT" << EOF
 echo "Starting precomputation at \$(date)"
 echo "================================"
 
+# Compute all layers (0 through 26 for Gemma-2B)
+# Dynamically determine number of layers based on model
 python semantic_connectivity_pipeline/precompute_dictionary_embeddings_hf.py \\
     --model "$MODEL_PATH" \\
     --output-dir "$OUTPUT_DIR" \\
     --device "$DEVICE" \\
     --batch-size "$BATCH_SIZE" \\
+    --layers \$(seq 0 26) \\
     --download-nltk \\
     --upload-to-hf \\
     --hf-repo-id "$HF_REPO_ID" \\
@@ -117,4 +122,5 @@ echo "To detach from tmux: Press Ctrl+B, then D"
 echo ""
 echo "The job will continue running even if you disconnect."
 echo ""
-echo -e "${YELLOW}Estimated completion time: 4-6 hours for full WordNet dictionary${NC}"
+echo -e "${YELLOW}Estimated completion time: 8-12 hours for full WordNet dictionary (all 27 layers)${NC}"
+echo -e "${YELLOW}Output size: ~9GB for 77k words across 27 layers${NC}"
