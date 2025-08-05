@@ -34,24 +34,32 @@ class CircuitFeatureExtractor:
         """Initialize with model and tracer."""
         print(f"Loading model from {model_path}...")
         
-        # Load model using circuit tracer
-        if "gemma" in model_path.lower():
+        # Determine model name for circuit tracer
+        if "gemma-2b" in model_path.lower() or model_path.endswith("gemma-2b"):
+            model_name = "google/gemma-2b"
+            transcoder_set = 'gemma'
+        elif "gemma-7b" in model_path.lower():
+            model_name = "google/gemma-7b"
             transcoder_set = 'gemma'
         else:
+            # Default to using the path as-is
+            model_name = model_path
             transcoder_set = 'gpt2'
+            
+        print(f"Using model name: {model_name} with transcoder set: {transcoder_set}")
             
         # Set device for loading
         if device == 'mps':
             # Load on CPU first, then move to MPS
             self.model = ReplacementModel.from_pretrained(
-                model_path,
+                model_name,
                 transcoder_set,
                 torch_dtype=torch.float32
             )
             self.model = self.model.to(device)
         else:
             self.model = ReplacementModel.from_pretrained(
-                model_path,
+                model_name,
                 transcoder_set,
                 torch_dtype=torch.float32,
                 device_map='auto' if device == 'cuda' else None
