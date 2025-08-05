@@ -132,6 +132,9 @@ class CircuitFeatureExtractor:
                 
                 # Check the structure - features to all nodes
                 print(f"  Checking connectivity from features...")
+                # Get n_logits first
+                n_logits = len(graph.logit_tokens) if hasattr(graph, 'logit_tokens') else 5
+                
                 # Check if ANY feature connects to ANY logit
                 feature_to_logit = adjacency[:n_features, -n_logits:]
                 any_connection = (feature_to_logit != 0).any()
