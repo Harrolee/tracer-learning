@@ -35,8 +35,24 @@ class CircuitFeatureExtractor:
         print(f"Loading model from {model_path}...")
         
         # Determine model name for circuit tracer
-        if "gemma-2b" in model_path.lower() or model_path.endswith("gemma-2b"):
-            model_name = "google/gemma-2b"
+        # Check config to identify exact model version
+        try:
+            import json
+            config_path = Path(model_path) / "config.json"
+            if config_path.exists():
+                with open(config_path, 'r') as f:
+                    config = json.load(f)
+                    print(f"Model config: hidden_size={config.get('hidden_size')}, layers={config.get('num_hidden_layers')}")
+        except:
+            pass
+            
+        if "gemma-2-2b" in model_path.lower() or model_path.endswith("gemma-2-2b"):
+            model_name = "google/gemma-2-2b"
+            transcoder_set = 'gemma'  # Try with gemma transcoders for gemma-2
+        elif "gemma-2b" in model_path.lower() or model_path.endswith("gemma-2b"):
+            # Original gemma-2b - use the newer gemma-2-2b instead
+            print("Note: Original gemma-2b detected. Using gemma-2-2b for better compatibility.")
+            model_name = "google/gemma-2-2b"
             transcoder_set = 'gemma'
         elif "gemma-7b" in model_path.lower():
             model_name = "google/gemma-7b"
@@ -81,7 +97,8 @@ class CircuitFeatureExtractor:
                 prompt,
                 self.model,
                 batch_size=1,
-                verbose=False
+                verbose=False,
+                offload=None  # Ensure no offloading which might cause shape issues
             )
             
             # Extract features by layer
@@ -123,6 +140,9 @@ class CircuitFeatureExtractor:
             
         except Exception as e:
             print(f"Warning: Feature extraction failed for '{word}': {e}")
+            # Log more details for debugging
+            import traceback
+            print(f"Full error trace: {traceback.format_exc()}")
             return {}
     
     def extract_features_for_words(
