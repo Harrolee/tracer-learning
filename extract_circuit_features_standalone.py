@@ -89,8 +89,9 @@ class CircuitFeatureExtractor:
     def extract_features_for_word(self, word: str, top_k: int = 10) -> Dict:
         """Extract circuit features for a single word."""
         try:
-            # Create prompt with the word
-            prompt = f" {word}"
+            # Create prompt with the word - try different formats
+            # Using just the word with a space might not generate enough context
+            prompt = f"The word {word} means"
             
             # Get attribution graph
             graph = attribute(
@@ -128,6 +129,17 @@ class CircuitFeatureExtractor:
                 # Check if there are any non-zero values in the adjacency matrix
                 non_zero_count = (adjacency != 0).sum().item()
                 print(f"  Non-zero entries in adjacency: {non_zero_count}")
+                
+                # Check the structure - features to all nodes
+                print(f"  Checking connectivity from features...")
+                # Check if ANY feature connects to ANY logit
+                feature_to_logit = adjacency[:n_features, -n_logits:]
+                any_connection = (feature_to_logit != 0).any()
+                print(f"  Any feature→logit connection: {any_connection}")
+                
+                # Check what features DO connect to
+                feature_connections = (adjacency[:n_features] != 0).sum(dim=1)
+                print(f"  Average connections per feature: {feature_connections.float().mean():.1f}")
                 
                 # Group features by layer
                 for i, (layer, pos, feature_idx) in enumerate(graph.active_features):
