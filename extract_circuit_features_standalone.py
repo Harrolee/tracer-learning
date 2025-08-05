@@ -121,6 +121,14 @@ class CircuitFeatureExtractor:
                 adjacency = graph.adjacency_matrix
                 n_features = len(graph.active_features)
                 
+                # Debug adjacency matrix
+                print(f"  Adjacency matrix shape: {adjacency.shape}")
+                print(f"  Number of logit tokens: {len(graph.logit_tokens) if hasattr(graph, 'logit_tokens') else 'Unknown'}")
+                
+                # Check if there are any non-zero values in the adjacency matrix
+                non_zero_count = (adjacency != 0).sum().item()
+                print(f"  Non-zero entries in adjacency: {non_zero_count}")
+                
                 # Group features by layer
                 for i, (layer, pos, feature_idx) in enumerate(graph.active_features):
                     layer = int(layer)
@@ -138,14 +146,24 @@ class CircuitFeatureExtractor:
                     if i < adjacency.shape[0] and adjacency.shape[0] > n_logits:
                         logit_attributions = adjacency[i, -n_logits:]
                         max_strength = float(torch.max(torch.abs(logit_attributions)))
+                        
+                        # Debug first feature
+                        if i == 0:
+                            print(f"  First feature attributions to logits: {logit_attributions}")
+                            print(f"  Max strength: {max_strength}")
                     else:
                         max_strength = 0.0
+                        if i == 0:
+                            print(f"  Skipped feature {i}: adjacency shape issue")
                     
-                    if max_strength > 0:
+                    # Use a small threshold instead of exactly 0
+                    if max_strength > 1e-10:  # Very small threshold
                         word_features[layer].append({
                             'feature_id': feature_idx,
                             'activation_strength': max_strength
                         })
+                    elif i < 5:  # Debug: print first few strengths
+                        print(f"    Feature {feature_idx} in layer {layer}: strength={max_strength}")
                 
                 # Sort and limit features per layer
                 for layer in word_features:
