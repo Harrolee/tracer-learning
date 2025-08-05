@@ -104,37 +104,46 @@ class CircuitFeatureExtractor:
             # Extract features by layer
             word_features = {}
             
-            # Get feature nodes from the graph
-            feature_nodes = [node for node in graph.nodes if node.node_type == 'feature']
-            
-            # Group features by layer
-            for node in feature_nodes:
-                layer = node.layer
-                if layer not in word_features:
-                    word_features[layer] = []
+            # active_features is a tensor of shape (n_active_features, 3)
+            # containing (layer, pos, feature_idx) for each active feature
+            if graph.active_features is not None and len(graph.active_features) > 0:
+                # Get adjacency matrix to find feature strengths
+                adjacency = graph.adjacency_matrix
+                n_features = len(graph.active_features)
                 
-                # Get attribution strength for this feature
-                # Look for edges from this feature to output logits
-                logit_nodes = [n for n in graph.nodes if n.node_type == 'logit']
+                # Group features by layer
+                for i, (layer, pos, feature_idx) in enumerate(graph.active_features):
+                    layer = int(layer)
+                    feature_idx = int(feature_idx)
+                    
+                    if layer not in word_features:
+                        word_features[layer] = []
+                    
+                    # Get the attribution strength from adjacency matrix
+                    # Features are the first n_features rows/cols in the adjacency matrix
+                    # Logits are the last entries
+                    n_logits = len(graph.logit_tokens) if hasattr(graph, 'logit_tokens') else 10
+                    
+                    # Get max attribution to any logit
+                    if i < adjacency.shape[0] and adjacency.shape[0] > n_logits:
+                        logit_attributions = adjacency[i, -n_logits:]
+                        max_strength = float(torch.max(torch.abs(logit_attributions)))
+                    else:
+                        max_strength = 0.0
+                    
+                    if max_strength > 0:
+                        word_features[layer].append({
+                            'feature_id': feature_idx,
+                            'activation_strength': max_strength
+                        })
                 
-                max_strength = 0
-                for logit_node in logit_nodes:
-                    edge_weight = graph.edges.get((node.node_id, logit_node.node_id), 0)
-                    max_strength = max(max_strength, abs(edge_weight))
-                
-                if max_strength > 0:
-                    word_features[layer].append({
-                        'feature_id': node.feature_id,
-                        'activation_strength': max_strength
-                    })
-            
-            # Sort and limit features per layer
-            for layer in word_features:
-                word_features[layer] = sorted(
-                    word_features[layer],
-                    key=lambda x: x['activation_strength'],
-                    reverse=True
-                )[:top_k]
+                # Sort and limit features per layer
+                for layer in word_features:
+                    word_features[layer] = sorted(
+                        word_features[layer],
+                        key=lambda x: x['activation_strength'],
+                        reverse=True
+                    )[:top_k]
             
             return word_features
             
