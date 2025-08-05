@@ -49,21 +49,18 @@ class CircuitFeatureExtractor:
         print(f"Using model name: {model_name} with transcoder set: {transcoder_set}")
             
         # Set device for loading
-        if device == 'mps':
-            # Load on CPU first, then move to MPS
-            self.model = ReplacementModel.from_pretrained(
-                model_name,
-                transcoder_set,
-                torch_dtype=torch.float32
-            )
+        # Always load on CPU first to avoid device conflicts, then move to target device
+        self.model = ReplacementModel.from_pretrained(
+            model_name,
+            transcoder_set,
+            torch_dtype=torch.float32,
+            device_map=None  # Load on CPU first
+        )
+        
+        # Move to target device
+        if device != 'cpu':
+            print(f"Moving model to {device}...")
             self.model = self.model.to(device)
-        else:
-            self.model = ReplacementModel.from_pretrained(
-                model_name,
-                transcoder_set,
-                torch_dtype=torch.float32,
-                device_map='auto' if device == 'cuda' else None
-            )
         
         self.model.eval()
         self.device = device
