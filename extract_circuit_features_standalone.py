@@ -10,7 +10,14 @@ import json
 import argparse
 from pathlib import Path
 from typing import Dict, List, Any, Set
-from tqdm import tqdm
+try:
+    from tqdm import tqdm
+except ImportError:
+    # Fallback if tqdm is not installed
+    def tqdm(iterable, desc=None, total=None):
+        if desc:
+            print(f"{desc}...")
+        return iterable
 import torch
 import time
 import os

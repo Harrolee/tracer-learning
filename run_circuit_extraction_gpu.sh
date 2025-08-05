@@ -109,10 +109,14 @@ if features_file.exists():
     
     print(f'\n📊 Extraction Summary:')
     print(f'  - Total words in dataset: {total_words}')
-    print(f'  - Words with features: {df["word"].nunique()}')
-    print(f'  - Total feature activations: {len(df)}')
-    print(f'  - Average features per word: {len(df) / df["word"].nunique():.1f}')
-    print(f'  - Layers with features: {sorted(df["layer"].unique())}')
+    if len(df) > 0:
+        print(f'  - Words with features: {df["word"].nunique()}')
+        print(f'  - Total feature activations: {len(df)}')
+        if df["word"].nunique() > 0:
+            print(f'  - Average features per word: {len(df) / df["word"].nunique():.1f}')
+        print(f'  - Layers with features: {sorted(df["layer"].unique())}')
+    else:
+        print('  - No features extracted yet')
 "
     
     # Update completion status
