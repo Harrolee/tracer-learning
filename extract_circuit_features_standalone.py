@@ -98,11 +98,21 @@ class CircuitFeatureExtractor:
                 self.model,
                 batch_size=1,
                 verbose=False,
-                offload=None  # Ensure no offloading which might cause shape issues
+                offload=None,  # Ensure no offloading which might cause shape issues
+                max_n_logits=5,  # Reduce to see if it helps
+                desired_logit_prob=0.9
             )
             
             # Extract features by layer
             word_features = {}
+            
+            # Debug info
+            if graph.active_features is None:
+                print(f"  No active features found for '{word}'")
+            elif len(graph.active_features) == 0:
+                print(f"  Empty active features for '{word}'")
+            else:
+                print(f"  Found {len(graph.active_features)} active features for '{word}'")
             
             # active_features is a tensor of shape (n_active_features, 3)
             # containing (layer, pos, feature_idx) for each active feature
@@ -360,7 +370,7 @@ def main():
         sum(len(features) for features in word_features.values())
         for word_features in all_features.values()
     )
-    words_with_features = sum(1 for features in all_features.values() if features)
+    words_with_features = sum(1 for features in all_features.values() if features and any(len(layer_features) > 0 for layer_features in features.values()))
     
     print(f"\nSummary:")
     print(f"  - Words processed: {len(all_features)}")
