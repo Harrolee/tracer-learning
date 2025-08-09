@@ -25,7 +25,22 @@ import numpy as np
 
 # Import circuit tracer components
 from circuit_tracer import ReplacementModel
-from circuit_tracer.attribution import attribute
+
+# Debug import issue
+try:
+    from circuit_tracer.attribution import attribute
+    print(f"Successfully imported attribute: {type(attribute)}")
+except ImportError as e:
+    print(f"Failed to import attribute directly: {e}")
+    # Try alternative import
+    import circuit_tracer.attribution as attribution
+    if hasattr(attribution, 'attribute'):
+        attribute = attribution.attribute
+        print(f"Found attribute as: {type(attribute)}")
+    else:
+        # List what's available
+        print(f"Available in attribution module: {dir(attribution)}")
+        raise ImportError("Cannot find attribute function in circuit_tracer.attribution")
 
 class CircuitFeatureExtractor:
     """Extract circuit features for words using Circuit Tracer."""
@@ -34,35 +49,12 @@ class CircuitFeatureExtractor:
         """Initialize with model and tracer."""
         print(f"Loading model from {model_path}...")
         
-        # Determine model name for circuit tracer
-        # Check config to identify exact model version
-        try:
-            import json
-            config_path = Path(model_path) / "config.json"
-            if config_path.exists():
-                with open(config_path, 'r') as f:
-                    config = json.load(f)
-                    print(f"Model config: hidden_size={config.get('hidden_size')}, layers={config.get('num_hidden_layers')}")
-        except:
-            pass
-            
-        if "gemma-2-2b" in model_path.lower() or model_path.endswith("gemma-2-2b"):
-            model_name = "google/gemma-2-2b"
-            transcoder_set = 'gemma'  # Try with gemma transcoders for gemma-2
-        elif "gemma-2b" in model_path.lower() or model_path.endswith("gemma-2b"):
-            # Original gemma-2b - use the newer gemma-2-2b instead
-            print("Note: Original gemma-2b detected. Using gemma-2-2b for better compatibility.")
-            model_name = "google/gemma-2-2b"
-            transcoder_set = 'gemma'
-        elif "gemma-7b" in model_path.lower():
-            model_name = "google/gemma-7b"
-            transcoder_set = 'gemma'
-        else:
-            # Default to using the path as-is
-            model_name = model_path
-            transcoder_set = 'gpt2'
-            
-        print(f"Using model name: {model_name} with transcoder set: {transcoder_set}")
+        # Always use gemma-2-2b from HuggingFace for consistency
+        model_name = "google/gemma-2-2b"
+        transcoder_set = 'gemma'
+        
+        print(f"Using model: {model_name} (downloading from HuggingFace if needed)")
+        print(f"Transcoder set: {transcoder_set}")
             
         # Set device for loading
         # Always load on CPU first to avoid device conflicts, then move to target device
@@ -107,44 +99,13 @@ class CircuitFeatureExtractor:
             # Extract features by layer
             word_features = {}
             
-            # Debug info
-            if graph.active_features is None:
-                print(f"  No active features found for '{word}'")
-            elif len(graph.active_features) == 0:
-                print(f"  Empty active features for '{word}'")
-            else:
-                print(f"  Found {len(graph.active_features)} active features for '{word}'")
-            
             # active_features is a tensor of shape (n_active_features, 3)
             # containing (layer, pos, feature_idx) for each active feature
             if graph.active_features is not None and len(graph.active_features) > 0:
-                # Get adjacency matrix to find feature strengths
-                adjacency = graph.adjacency_matrix
-                n_features = len(graph.active_features)
+                # Get activation values if available
+                activation_values = graph.activation_values if hasattr(graph, 'activation_values') else None
                 
-                # Debug adjacency matrix
-                print(f"  Adjacency matrix shape: {adjacency.shape}")
-                print(f"  Number of logit tokens: {len(graph.logit_tokens) if hasattr(graph, 'logit_tokens') else 'Unknown'}")
-                
-                # Check if there are any non-zero values in the adjacency matrix
-                non_zero_count = (adjacency != 0).sum().item()
-                print(f"  Non-zero entries in adjacency: {non_zero_count}")
-                
-                # Check the structure - features to all nodes
-                print(f"  Checking connectivity from features...")
-                # Get n_logits first
-                n_logits = len(graph.logit_tokens) if hasattr(graph, 'logit_tokens') else 5
-                
-                # Check if ANY feature connects to ANY logit
-                feature_to_logit = adjacency[:n_features, -n_logits:]
-                any_connection = (feature_to_logit != 0).any()
-                print(f"  Any feature→logit connection: {any_connection}")
-                
-                # Check what features DO connect to
-                feature_connections = (adjacency[:n_features] != 0).sum(dim=1)
-                print(f"  Average connections per feature: {feature_connections.float().mean():.1f}")
-                
-                # Group features by layer
+                # Process active features
                 for i, (layer, pos, feature_idx) in enumerate(graph.active_features):
                     layer = int(layer)
                     feature_idx = int(feature_idx)
@@ -152,35 +113,18 @@ class CircuitFeatureExtractor:
                     if layer not in word_features:
                         word_features[layer] = []
                     
-                    # Get the attribution strength from adjacency matrix
-                    # Features are the first n_features rows/cols in the adjacency matrix
-                    # Logits are the last entries
-                    n_logits = len(graph.logit_tokens) if hasattr(graph, 'logit_tokens') else 10
+                    # Get activation strength from activation_values if available
+                    activation_strength = 1.0  # Default to binary
+                    if activation_values is not None and i < len(activation_values):
+                        activation_strength = float(activation_values[i].abs().item())
                     
-                    # Get max attribution to any logit
-                    if i < adjacency.shape[0] and adjacency.shape[0] > n_logits:
-                        logit_attributions = adjacency[i, -n_logits:]
-                        max_strength = float(torch.max(torch.abs(logit_attributions)))
-                        
-                        # Debug first feature
-                        if i == 0:
-                            print(f"  First feature attributions to logits: {logit_attributions}")
-                            print(f"  Max strength: {max_strength}")
-                    else:
-                        max_strength = 0.0
-                        if i == 0:
-                            print(f"  Skipped feature {i}: adjacency shape issue")
-                    
-                    # Use a small threshold instead of exactly 0
-                    if max_strength > 1e-10:  # Very small threshold
-                        word_features[layer].append({
-                            'feature_id': feature_idx,
-                            'activation_strength': max_strength
-                        })
-                    elif i < 5:  # Debug: print first few strengths
-                        print(f"    Feature {feature_idx} in layer {layer}: strength={max_strength}")
+                    # Store the feature
+                    word_features[layer].append({
+                        'feature_id': feature_idx,
+                        'activation_strength': activation_strength
+                    })
                 
-                # Sort and limit features per layer
+                # Sort and limit features per layer by activation strength
                 for layer in word_features:
                     word_features[layer] = sorted(
                         word_features[layer],
@@ -305,10 +249,10 @@ def main():
     parser = argparse.ArgumentParser(description='Extract circuit features for analyzed words')
     parser.add_argument('--model', type=str, required=True,
                         help='Path to model directory')
-    parser.add_argument('--results-dir', type=str, required=True,
-                        help='Directory with connectivity analysis results')
-    parser.add_argument('--output-file', type=str, default=None,
-                        help='Output CSV file (default: results-dir/feature_activations.csv)')
+    parser.add_argument('--words-file', type=str, default='sampled_words.json',
+                        help='Path to JSON file containing words to analyze')
+    parser.add_argument('--output-dir', type=str, default='results',
+                        help='Directory to save output files')
     parser.add_argument('--device', type=str, default='cpu',
                         help='Device to use (cpu, cuda, mps)')
     parser.add_argument('--top-k-features', type=int, default=10,
@@ -320,18 +264,20 @@ def main():
     parser.add_argument('--resume', action='store_true',
                         help='Resume from checkpoint if available')
     parser.add_argument('--checkpoint-file', type=str, default=None,
-                        help='Checkpoint file path (default: results-dir/circuit_checkpoint.json)')
+                        help='Checkpoint file path (default: output-dir/circuit_checkpoint.json)')
     parser.add_argument('--test-words', type=int, default=0,
                         help='Test with first N words only (0 = all words)')
     
     args = parser.parse_args()
     
-    # Load words from existing analysis
-    results_dir = Path(args.results_dir)
-    words_file = results_dir / 'sampled_words.json'
+    # Setup output directory
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
     
+    # Load words
+    words_file = Path(args.words_file)
     if not words_file.exists():
-        print(f"Error: No sampled_words.json found in {results_dir}")
+        print(f"Error: Words file not found: {words_file}")
         return
     
     with open(words_file, 'r') as f:
@@ -345,7 +291,7 @@ def main():
         print(f"Loaded {len(sampled_words)} words from previous analysis")
     
     # Set up checkpoint file
-    checkpoint_file = Path(args.checkpoint_file) if args.checkpoint_file else results_dir / 'circuit_checkpoint.json'
+    checkpoint_file = Path(args.checkpoint_file) if args.checkpoint_file else output_dir / 'circuit_checkpoint.json'
     if not args.resume and checkpoint_file.exists():
         print(f"Warning: Checkpoint file exists at {checkpoint_file}")
         response = input("Resume from checkpoint? (y/n): ")
@@ -365,7 +311,7 @@ def main():
     )
     
     # Export results
-    output_file = Path(args.output_file) if args.output_file else results_dir / 'feature_activations.csv'
+    output_file = output_dir / 'feature_activations.csv'
     
     # Check if we should append or overwrite
     append_mode = args.resume and output_file.exists()

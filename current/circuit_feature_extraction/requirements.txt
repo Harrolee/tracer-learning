@@ -1,0 +1,19 @@
+# Core dependencies for circuit feature extraction
+torch>=2.0.0
+transformers>=4.35.0
+huggingface-hub>=0.19.0
+safetensors>=0.4.0
+
+# Circuit tracer - install from GitHub
+# pip install git+https://github.com/sae-lens/circuit-tracer.git
+
+# Utilities
+einops>=0.7.0
+tqdm>=4.65.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Optional but recommended
+matplotlib>=3.7.0
+jupyter>=1.0.0
+ipywidgets>=8.0.0

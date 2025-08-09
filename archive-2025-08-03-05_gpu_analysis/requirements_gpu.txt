@@ -1,0 +1,7 @@
+# Requirements for circuit feature extraction on GPU
+torch>=2.0.0
+transformers>=4.30.0
+circuit-tracer
+tqdm
+pandas
+numpy
